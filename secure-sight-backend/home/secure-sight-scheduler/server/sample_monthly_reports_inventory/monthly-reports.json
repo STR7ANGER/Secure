@@ -1,0 +1,3015 @@
+[{
+  "Eventus_July_Report": {
+    "Key Feature Adoption Rate of A1": {
+      "Key Feature Adoption Rate of A1": [
+        {
+          "Feature Name": "Vulnerability Protection",
+          "Total": 200,
+          "Count": 162,
+          "Rate": 81
+        },
+        {
+          "Feature Name": "Anti-Malware Scans",
+          "Total": 200,
+          "Count": 162,
+          "Rate": 81
+        },
+        {
+          "Feature Name": "Web Reputation",
+          "Total": 201,
+          "Count": 163,
+          "Rate": 81.1
+        },
+        {
+          "Feature Name": "Behavior Monitoring",
+          "Total": 201,
+          "Count": 163,
+          "Rate": 81.1
+        },
+        {
+          "Feature Name": "Predictive Machine Learning",
+          "Total": 201,
+          "Count": 163,
+          "Rate": 81.1
+        },
+        {
+          "Feature Name": "Smart Feedback",
+          "Total": 201,
+          "Count": 163,
+          "Rate": 81.1
+        },
+        {
+          "Feature Name": "Firewall",
+          "Total": 201,
+          "Count": 0,
+          "Rate": 0
+        },
+        {
+          "Feature Name": "Suspicious Connection Service",
+          "Total": 200,
+          "Count": 162,
+          "Rate": 81
+        },
+        {
+          "Feature Name": "Device Control",
+          "Total": 200,
+          "Count": 1,
+          "Rate": 0.5
+        },
+        {
+          "Feature Name": "Application Control",
+          "Total": 201,
+          "Count": 2,
+          "Rate": 1
+        }
+      ]
+    },
+    "Key Feature Adoption Rate of C1": {
+      "Key Feature Adoption Rate of C1": [
+        {
+          "Feature Name": "Intrusion Prevention System (IPS)",
+          "Total": 5,
+          "Count": 4,
+          "Rate": 80
+        },
+        {
+          "Feature Name": "Anti-malware",
+          "Total": 5,
+          "Count": 3,
+          "Rate": 60
+        },
+        {
+          "Feature Name": "Web Reputation",
+          "Total": 5,
+          "Count": 4,
+          "Rate": 80
+        },
+        {
+          "Feature Name": "Behavior Monitoring",
+          "Total": 5,
+          "Count": 5,
+          "Rate": 100
+        },
+        {
+          "Feature Name": "Predictive Machine Learning",
+          "Total": 5,
+          "Count": 5,
+          "Rate": 100
+        },
+        {
+          "Feature Name": "Smart Feedback",
+          "Total": 5,
+          "Count": 5,
+          "Rate": 100
+        },
+        {
+          "Feature Name": "Firewall",
+          "Total": 5,
+          "Count": 3,
+          "Rate": 60
+        },
+        {
+          "Feature Name": "Agent Self-Protection",
+          "Total": 5,
+          "Count": 0,
+          "Rate": 0
+        },
+        {
+          "Feature Name": "File Integrity Monitoring (FIM)",
+          "Total": 5,
+          "Count": 3,
+          "Rate": 60
+        },
+        {
+          "Feature Name": "Log Inspection",
+          "Total": 5,
+          "Count": 3,
+          "Rate": 60
+        },
+        {
+          "Feature Name": "Device Control",
+          "Total": "NA",
+          "Count": "NA",
+          "Rate": "NA"
+        },
+        {
+          "Feature Name": "Application Control",
+          "Total": 5,
+          "Count": 3,
+          "Rate": 60
+        }
+      ]
+    },
+    "Top Risk Users": {
+      "Top Risk Users": [
+        {
+          "User Name": "Ahmad Yanis",
+          "Risk Score": 81
+        }
+      ]
+    },
+    "Top Risk Device": {
+      "Top Risk Device": [
+        {
+          "Device Name": "DESKTOP-SA4HVRM",
+          "Risk Score": 70
+        },
+        {
+          "Device Name": "IN022194",
+          "Risk Score": 70
+        },
+        {
+          "Device Name": "IND022201",
+          "Risk Score": 70
+        }
+      ]
+    },
+    "Account Compromise Events": {
+      "Account Compromise Events": []
+    },
+    "Critical High Incidents Summary": {
+      "Critical/High Incidents Summary": [
+        {
+          "Impact-Priority": "P2 - High",
+          "Incident Title": "[Heuristic Attribute] Possible OS Credential Dumping - 2",
+          "Findings and Actions Performed": ""
+        },
+        {
+          "Impact-Priority": "P2 - High",
+          "Incident Title": "File Detection for Metasploit Meterpreter - 2",
+          "Findings and Actions Performed": ""
+        },
+        {
+          "Impact-Priority": "P2 - High",
+          "Incident Title": "[Heuristic Attribute] Possible Data Encrypted for Impact - 1",
+          "Findings and Actions Performed": ""
+        },
+        {
+          "Impact-Priority": "P1 - Critical",
+          "Incident Title": "Ransomware Related Detections (Real-time Scan) - 1",
+          "Findings and Actions Performed": ""
+        },
+        {
+          "Impact-Priority": "P2 - High",
+          "Incident Title": "Privilege Escalation via PEASS-ng - 1",
+          "Findings and Actions Performed": ""
+        }
+      ]
+    },
+    "Executive Summary": {
+      "Incident Overview by SOC Team": [
+        {
+          "No of Incidents": 11,
+          "Name of Incident": "Predictive Machine Learning Detection - Blocked",
+          "Description": "An unknown threat was detected on an endpoint and blocked by Trend Micro Predictive Machine Learning."
+        },
+        {
+          "No of Incidents": 6,
+          "Name of Incident": "Suspicious Powershell Connection To Web Service",
+          "Description": "The adversary attempted to download a payload stored on a legitimate external web service."
+        },
+        {
+          "No of Incidents": 4,
+          "Name of Incident": "Hacking Tool Detection - Blocked",
+          "Description": "A hacking tool, which is generally used for cracking computer and network security or by system administrators to test security, was detected and blocked on an endpoint."
+        },
+        {
+          "No of Incidents": 4,
+          "Name of Incident": "Possible Account Compromise - Atypical Travel",
+          "Description": "User account has a successful sign-in attempt originating from a location that is unusual based on the known travel behavior of the user."
+        },
+        {
+          "No of Incidents": 4,
+          "Name of Incident": "Pass the Hash via Crackmapexec",
+          "Description": "A pass the hash attempt using Crackmapexec was found."
+        }
+      ],
+      "Action Performed by SOC Team": [
+        {
+          "No of Incidents": 11,
+          "Name of Incident": "Predictive Machine Learning Detection - Blocked",
+          "Action Performed": ""
+        },
+        {
+          "No of Incidents": 6,
+          "Name of Incident": "Suspicious Powershell Connection To Web Service",
+          "Action Performed": ""
+        },
+        {
+          "No of Incidents": 4,
+          "Name of Incident": "Hacking Tool Detection - Blocked",
+          "Action Performed": ""
+        },
+        {
+          "No of Incidents": 4,
+          "Name of Incident": "Possible Account Compromise - Atypical Travel",
+          "Action Performed": ""
+        },
+        {
+          "No of Incidents": 4,
+          "Name of Incident": "Pass the Hash via Crackmapexec",
+          "Action Performed": ""
+        }
+      ],
+      "Recommendations by SOC Team": [
+        {
+          "No of Incidents": 11,
+          "Name of Incident": "Predictive Machine Learning Detection - Blocked",
+          "Recommendations": ""
+        },
+        {
+          "No of Incidents": 6,
+          "Name of Incident": "Suspicious Powershell Connection To Web Service",
+          "Recommendations": ""
+        },
+        {
+          "No of Incidents": 4,
+          "Name of Incident": "Hacking Tool Detection - Blocked",
+          "Recommendations": ""
+        },
+        {
+          "No of Incidents": 4,
+          "Name of Incident": "Possible Account Compromise - Atypical Travel",
+          "Recommendations": ""
+        },
+        {
+          "No of Incidents": 4,
+          "Name of Incident": "Pass the Hash via Crackmapexec",
+          "Recommendations": ""
+        }
+      ]
+    },
+    "Overall Incidents Summary": {
+      "Status Summary": {
+        "Incidents Closed with Resolution": 0,
+        "Incidents Closed without Acknowledgement": 0,
+        "Pending Incidents with SOC Team": 0
+      },
+      "Overall Incidents Summary": {
+        "P1": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P2": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P3": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P4": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        }
+      }
+    },
+    "Detailed Summary": {
+      "Total No of Incidents": {
+        "Total Incidents": 49,
+        "Month & Year": "7/2024"
+      },
+      "Risk Index": {
+        "Score": 44,
+        "Description": "The Risk Index is a comprehensive score based on the dynamic assessment of risk factors inclusive of exposure, attack risk, and security configurations risk. You can take company-wide remediation steps and preventive measures to lower the company-wide risk index over time."
+      },
+      "No of Highly Exploitable Unique CVEs": 131,
+      "No of Incidents Closed without acknowledgement": 0,
+      "Top incidents": [
+        {
+          "Incident Names with no of Occurrence": "Predictive Machine Learning Detection - Blocked - 11",
+          "Priority - Impact": "P4 - Low",
+          "Data Source": "SAE"
+        },
+        {
+          "Incident Names with no of Occurrence": "Suspicious Powershell Connection To Web Service - 6",
+          "Priority - Impact": "P3 - Medium",
+          "Data Source": "SAE"
+        },
+        {
+          "Incident Names with no of Occurrence": "Hacking Tool Detection - Blocked - 4",
+          "Priority - Impact": "P4 - Low",
+          "Data Source": "SAE"
+        },
+        {
+          "Incident Names with no of Occurrence": "Possible Account Compromise - Atypical Travel - 4",
+          "Priority - Impact": "P4 - Low",
+          "Data Source": "SAE"
+        },
+        {
+          "Incident Names with no of Occurrence": "Pass the Hash via Crackmapexec - 4",
+          "Priority - Impact": "P4 - Low",
+          "Data Source": "SAE"
+        },
+        {
+          "No of Incidents": 29
+        }
+      ]
+    },
+    "Vulnerability Assessment Report": {
+      "Internal Assets": {
+        "Vulnerable Endpoint Percentage": 37,
+        "Highly-Exploitable CVE Density": 1,
+        "Devices with Legacy Windows Systems": 0,
+        "Average Unpatched Time": 0,
+        "Mean Time to Patch (MTTP)": 2,
+        "Highly-Exploitable Unique CVEs": 131
+      }
+    },
+    "System Configuration Report": {
+      "System Configuration Report": {
+        "Accounts with Weak Authentication": 3,
+        "Accounts that Increase Attack Surface Risk": 78,
+        "Accounts with Excessive Privilege": 0,
+        "Hosts with Insecure Connection Issues": 3
+      }
+    },
+    "Agent Version Summary": {
+      "All Agents Version Summary": {
+        "Total (Endpoint + Server)": 201,
+        "Latest Version (Endpoint + Server)": 174,
+        "Older Version (Endpoint + Server)": 27,
+        "End-of-Life version (Endpoint + Server)": 0
+      }
+    },
+    "Detection Summary from A1": {
+      "Detection Summary form Apex One": {
+        "Virus/Malware & Spyware/Grayware": {
+          "File Cleaned (Virus/Malware + Spyware/Grayware)": 264,
+          "File Quarantine (Virus / Malware)": 80,
+          "Restart Action Required (Virus / Malware)": 0,
+          "File Deleted (Virus / Malware)": 0
+        },
+        "C & C Connections & Intrusion attempts Blocked": {
+          "Total C & C Connections Blocked": 13843,
+          "Total Intrusion Attempts Blocked": 0
+        }
+      },
+      "Top 03 Endpoints": {
+        "File Cleaned/Spyware": [
+          [
+            "WINDEV2401EVAL",
+            70
+          ]
+        ],
+        "File Cleaned/Malware": [
+          [
+            "WINDEV2401EVAL",
+            193
+          ],
+          [
+            "IN0331401",
+            1
+          ]
+        ],
+        "File Deleted": [],
+        "C & C Connection Blocked": [
+          [
+            "WINDEV2401EVAL",
+            10910
+          ],
+          [
+            "IN022136",
+            2738
+          ],
+          [
+            "IN022149",
+            151
+          ]
+        ],
+        "Intrusion Attempts Blocked": []
+      }
+    },
+    "SLO Summary": {
+      "SLO Summary": {
+        "Total No of Incidents Closed": 0,
+        "SLO Met": 0,
+        "SLO Not Met": 0
+      }
+    },
+    "V1 Workbench Incidents Summary": {
+      "V1 Workbench Incidents Summary": {
+        "P1": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P2": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P3": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P4": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        }
+      }
+    },
+    "SIEM Incidents Summary": {
+      "SIEM Incidents Summary": {
+        "P1": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P2": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P3": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P4": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        }
+      }
+    },
+    "Pending Incidents Summary": {
+      "Pending Incidents Summary": []
+    },
+    "Endpoint Feature Compliance": {
+      "Endpoint Feature Compliance": {
+        "XDR Endpoint Sensor Not Enabled": 17,
+        "Vulnerability Protection not Enabled": 38,
+        "XDR Endpoint Sensor, Vulnerability Protection Enabled": 199
+      }
+    },
+    "Email Summary": {
+      "Email Status": {
+        "Quarantined": 19,
+        "Deleted": 0
+      },
+      "Top 03 Sender and Receipts": {
+        "Top 3 Senders": [
+          "noreply@zohopeople.com",
+          "noreply@email.teams.microsoft.com",
+          "trendmicrotscases@trendmicro.com"
+        ],
+        "Top 3 Receipts": [
+          "security_alert@eventussecurity.com",
+          "SOC_L2@eventussecurity.com",
+          "tejas.shah@eventussecurity.com"
+        ]
+      },
+      "Threat Type": {
+        "Malicious Files": 0,
+        "Malicious URLs": 2,
+        "Phishing": 0,
+        "Spoofing": 0,
+        "Suspicious Object": 0,
+        "Blocked Object": 0
+      }
+    },
+    "Risk Matrics": {
+      "Last Three Month Risk Score": {
+        "May": "NA",
+        "June": 44,
+        "July": 44
+      }
+    },
+    "Top Vulnerability Detected": {
+      "Top Vulnerabilities Detected": [
+        {
+          "CVE": "CVE-2023-20178",
+          "CVE impact score": 7.8
+        },
+        {
+          "CVE": "CVE-2023-22098",
+          "CVE impact score": 8.2
+        },
+        {
+          "CVE": "CVE-2024-38021",
+          "CVE impact score": 8.8
+        },
+        {
+          "CVE": "CVE-2024-32002",
+          "CVE impact score": 9
+        },
+        {
+          "CVE": "CVE-2018-4878",
+          "CVE impact score": 9.8
+        },
+        {
+          "CVE": "CVE-2022-21449",
+          "CVE impact score": 7.5
+        },
+        {
+          "CVE": "CVE-2018-11529",
+          "CVE impact score": 8
+        },
+        {
+          "CVE": "CVE-2018-20250",
+          "CVE impact score": 7.8
+        },
+        {
+          "CVE": "CVE-2020-13699",
+          "CVE impact score": 8.8
+        },
+        {
+          "CVE": "CVE-2021-4057",
+          "CVE impact score": 8.8
+        }
+      ]
+    },
+    "Product Assessment Report": {
+      "TM Products Summary": [
+        {
+          "TM Product": "Vision One",
+          "Connection Status": "Connected"
+        },
+        {
+          "TM Product": "Cloud One",
+          "Connection Status": "Connected"
+        },
+        {
+          "TM Product": "Apex Central",
+          "Connection Status": ""
+        },
+        {
+          "TM Product": "Cloud App security",
+          "Connection Status": ""
+        }
+      ],
+      "Third Party Products Summary": []
+    },
+    "Component Versions": {
+      "WorkLoad Protection": {
+        "Older": 1,
+        "Latest": 0,
+        "End of Life": 0
+      },
+      "Standard Endpoint Protection": {
+        "Older": 199,
+        "Latest": 186,
+        "End of Life": 0
+      }
+    }
+  }
+},
+{
+  "PFM_July_Report": {
+    "Key Feature Adoption Rate of A1": {
+      "Key Feature Adoption Rate of A1": [
+        {
+          "Feature Name": "Vulnerability Protection",
+          "Total": 1374,
+          "Count": 1343,
+          "Rate": 97.7
+        },
+        {
+          "Feature Name": "Anti-Malware Scans",
+          "Total": 1489,
+          "Count": 1458,
+          "Rate": 97.9
+        },
+        {
+          "Feature Name": "Web Reputation",
+          "Total": 2082,
+          "Count": 2035,
+          "Rate": 97.7
+        },
+        {
+          "Feature Name": "Behavior Monitoring",
+          "Total": 1956,
+          "Count": 1919,
+          "Rate": 98.1
+        },
+        {
+          "Feature Name": "Predictive Machine Learning",
+          "Total": 2071,
+          "Count": 2034,
+          "Rate": 98.2
+        },
+        {
+          "Feature Name": "Smart Feedback",
+          "Total": 2082,
+          "Count": 2051,
+          "Rate": 98.5
+        },
+        {
+          "Feature Name": "Firewall",
+          "Total": 1967,
+          "Count": 0,
+          "Rate": 0
+        },
+        {
+          "Feature Name": "Suspicious Connection Service",
+          "Total": 1374,
+          "Count": 1337,
+          "Rate": 97.3
+        },
+        {
+          "Feature Name": "Device Control",
+          "Total": 1719,
+          "Count": 342,
+          "Rate": 19.9
+        },
+        {
+          "Feature Name": "Application Control",
+          "Total": 1967,
+          "Count": 1925,
+          "Rate": 97.9
+        }
+      ]
+    },
+    "Key Feature Adoption Rate of C1": {
+      "Key Feature Adoption Rate of C1": [
+        {
+          "Feature Name": "Intrusion Prevention System (IPS)",
+          "Total": 841,
+          "Count": 585,
+          "Rate": 70
+        },
+        {
+          "Feature Name": "Anti-malware",
+          "Total": 841,
+          "Count": 585,
+          "Rate": 70
+        },
+        {
+          "Feature Name": "Web Reputation",
+          "Total": 841,
+          "Count": 585,
+          "Rate": 70
+        },
+        {
+          "Feature Name": "Behavior Monitoring",
+          "Total": 841,
+          "Count": 841,
+          "Rate": 100
+        },
+        {
+          "Feature Name": "Predictive Machine Learning",
+          "Total": 841,
+          "Count": 841,
+          "Rate": 100
+        },
+        {
+          "Feature Name": "Smart Feedback",
+          "Total": 841,
+          "Count": 841,
+          "Rate": 100
+        },
+        {
+          "Feature Name": "Firewall",
+          "Total": 841,
+          "Count": 0,
+          "Rate": 0
+        },
+        {
+          "Feature Name": "Agent Self-Protection",
+          "Total": 841,
+          "Count": 227,
+          "Rate": 27
+        },
+        {
+          "Feature Name": "File Integrity Monitoring (FIM)",
+          "Total": 841,
+          "Count": 585,
+          "Rate": 70
+        },
+        {
+          "Feature Name": "Log Inspection",
+          "Total": 841,
+          "Count": 585,
+          "Rate": 70
+        },
+        {
+          "Feature Name": "Device Control",
+          "Total": "NA",
+          "Count": "NA",
+          "Rate": "NA"
+        },
+        {
+          "Feature Name": "Application Control",
+          "Total": 841,
+          "Count": 585,
+          "Rate": 70
+        }
+      ]
+    },
+    "Top Risk Users": {
+      "Top Risk Users": [
+        {
+          "User Name": "Sachindra Nagendra",
+          "Risk Score": 73
+        },
+        {
+          "User Name": "Prathik M",
+          "Risk Score": 72
+        },
+        {
+          "User Name": "Avinash Sunil",
+          "Risk Score": 70
+        }
+      ]
+    },
+    "Top Risk Device": {
+      "Top Risk Device": [
+        {
+          "Device Name": "weur-pr-wip-v1",
+          "Risk Score": 83
+        },
+        {
+          "Device Name": "mum-pr-asp-v2",
+          "Risk Score": 83
+        },
+        {
+          "Device Name": "weur-pr-ez-v1",
+          "Risk Score": 82
+        },
+        {
+          "Device Name": "PFT-DESIGNER6",
+          "Risk Score": 80
+        },
+        {
+          "Device Name": "weur-ua-pmd-v1",
+          "Risk Score": 79
+        },
+        {
+          "Device Name": "ir-ib-asp-v1",
+          "Risk Score": 79
+        },
+        {
+          "Device Name": "weur-ua-mdb-v1",
+          "Risk Score": 79
+        },
+        {
+          "Device Name": "weur-ua-ssrs-v1",
+          "Risk Score": 79
+        },
+        {
+          "Device Name": "tndsea-dm",
+          "Risk Score": 77
+        },
+        {
+          "Device Name": "TN-MHQS-1",
+          "Risk Score": 75
+        }
+      ]
+    },
+    "Account Compromise Events": {
+      "Account Compromise Events": [
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Prathik M",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Prathik M",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Prathik M",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Prathik M",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Prathik M",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Prathik M",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Prathik M",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Prathik M",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Prathik M",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Prathik M",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Prathik M",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        }
+      ]
+    },
+    "Critical High Incidents Summary": {
+      "Critical/High Incidents Summary": [
+        {
+          "Impact-Priority": "P2 - High",
+          "Incident Title": "External Trigger Rule - 1",
+          "Findings and Actions Performed": ""
+        },
+        {
+          "Impact-Priority": "P2 - High",
+          "Incident Title": "Hacking Tool Detection - Not Blocked - 1",
+          "Findings and Actions Performed": ""
+        },
+        {
+          "Impact-Priority": "P2 - High",
+          "Incident Title": "[Heuristic Attribute] Impair Defenses - 1",
+          "Findings and Actions Performed": ""
+        }
+      ]
+    },
+    "Executive Summary": {
+      "Incident Overview by SOC Team": [
+        {
+          "No of Incidents": 1771,
+          "Name of Incident": "Multiple Failed Logons via Windows Event",
+          "Description": "Detects multiple occurrence of failed logons via Windows Event"
+        },
+        {
+          "No of Incidents": 130,
+          "Name of Incident": "Input Capture via Password Prompt - MacOS",
+          "Description": "Adversaries may mimic common operating system GUI components to prompt users for credentials with a seemingly legitimate prompt."
+        },
+        {
+          "No of Incidents": 122,
+          "Name of Incident": "Windows Logon Failed Attempt from Private IP",
+          "Description": "Detects windows events with logon attempt failure which might indicate brute force attempt."
+        },
+        {
+          "No of Incidents": 58,
+          "Name of Incident": "Mac Sandbox Discovery",
+          "Description": "Possible attempts to check sandbox environment to evade detection were made."
+        },
+        {
+          "No of Incidents": 6,
+          "Name of Incident": "Hidden User Creation - MacOS",
+          "Description": "A user was created and set to be hidden using the isHidden option or UniqueID < 500"
+        }
+      ],
+      "Action Performed by SOC Team": [
+        {
+          "No of Incidents": 1771,
+          "Name of Incident": "Multiple Failed Logons via Windows Event",
+          "Action Performed": ""
+        },
+        {
+          "No of Incidents": 130,
+          "Name of Incident": "Input Capture via Password Prompt - MacOS",
+          "Action Performed": ""
+        },
+        {
+          "No of Incidents": 122,
+          "Name of Incident": "Windows Logon Failed Attempt from Private IP",
+          "Action Performed": ""
+        },
+        {
+          "No of Incidents": 58,
+          "Name of Incident": "Mac Sandbox Discovery",
+          "Action Performed": ""
+        },
+        {
+          "No of Incidents": 6,
+          "Name of Incident": "Hidden User Creation - MacOS",
+          "Action Performed": ""
+        }
+      ],
+      "Recommendations by SOC Team": [
+        {
+          "No of Incidents": 1771,
+          "Name of Incident": "Multiple Failed Logons via Windows Event",
+          "Recommendations": ""
+        },
+        {
+          "No of Incidents": 130,
+          "Name of Incident": "Input Capture via Password Prompt - MacOS",
+          "Recommendations": ""
+        },
+        {
+          "No of Incidents": 122,
+          "Name of Incident": "Windows Logon Failed Attempt from Private IP",
+          "Recommendations": ""
+        },
+        {
+          "No of Incidents": 58,
+          "Name of Incident": "Mac Sandbox Discovery",
+          "Recommendations": ""
+        },
+        {
+          "No of Incidents": 6,
+          "Name of Incident": "Hidden User Creation - MacOS",
+          "Recommendations": ""
+        }
+      ]
+    },
+    "Overall Incidents Summary": {
+      "Status Summary": {
+        "Incidents Closed with Resolution": 6024,
+        "Incidents Closed without Acknowledgement": 0,
+        "Pending Incidents with SOC Team": 0
+      },
+      "Overall Incidents Summary": {
+        "P1": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P2": {
+          "Incidents Closed with Resolution": 646,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P3": {
+          "Incidents Closed with Resolution": 1403,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P4": {
+          "Incidents Closed with Resolution": 3975,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        }
+      }
+    },
+    "Detailed Summary": {
+      "Total No of Incidents": {
+        "Total Incidents": 2109,
+        "Month & Year": "7/2024"
+      },
+      "Risk Index": {
+        "Score": 58,
+        "Description": "The Risk Index is a comprehensive score based on the dynamic assessment of risk factors inclusive of exposure, attack risk, and security configurations risk. You can take company-wide remediation steps and preventive measures to lower the company-wide risk index over time."
+      },
+      "No of Highly Exploitable Unique CVEs": 1531,
+      "No of Incidents Closed without acknowledgement": 0,
+      "Top incidents": [
+        {
+          "Incident Names with no of Occurrence": "Multiple Failed Logons via Windows Event - 1771",
+          "Priority - Impact": "P4 - Low",
+          "Data Source": "SAE"
+        },
+        {
+          "Incident Names with no of Occurrence": "Input Capture via Password Prompt - MacOS - 130",
+          "Priority - Impact": "P3 - Medium",
+          "Data Source": "SAE"
+        },
+        {
+          "Incident Names with no of Occurrence": "Windows Logon Failed Attempt from Private IP - 122",
+          "Priority - Impact": "P4 - Low",
+          "Data Source": "SAE"
+        },
+        {
+          "Incident Names with no of Occurrence": "Mac Sandbox Discovery - 58",
+          "Priority - Impact": "P3 - Medium",
+          "Data Source": "SAE"
+        },
+        {
+          "Incident Names with no of Occurrence": "Hidden User Creation - MacOS - 6",
+          "Priority - Impact": "P3 - Medium",
+          "Data Source": "SAE"
+        },
+        {
+          "No of Incidents": 2087
+        }
+      ]
+    },
+    "Vulnerability Assessment Report": {
+      "Internal Assets": {
+        "Vulnerable Endpoint Percentage": 77,
+        "Highly-Exploitable CVE Density": 45,
+        "Devices with Legacy Windows Systems": 176,
+        "Average Unpatched Time": 13,
+        "Mean Time to Patch (MTTP)": 27,
+        "Highly-Exploitable Unique CVEs": 1531
+      }
+    },
+    "System Configuration Report": {
+      "System Configuration Report": {
+        "Accounts with Weak Authentication": 288,
+        "Accounts that Increase Attack Surface Risk": 561,
+        "Accounts with Excessive Privilege": 1,
+        "Hosts with Insecure Connection Issues": 6
+      }
+    },
+    "Agent Version Summary": {
+      "All Agents Version Summary": {
+        "Total (Endpoint + Server)": 2082,
+        "Latest Version (Endpoint + Server)": 1843,
+        "Older Version (Endpoint + Server)": 220,
+        "End-of-Life version (Endpoint + Server)": 19
+      }
+    },
+    "Detection Summary from A1": {
+      "Detection Summary form Apex One": {
+        "Virus/Malware & Spyware/Grayware": {
+          "File Cleaned (Virus/Malware + Spyware/Grayware)": 18,
+          "File Quarantine (Virus / Malware)": 3,
+          "Restart Action Required (Virus / Malware)": 0,
+          "File Deleted (Virus / Malware)": 0
+        },
+        "C & C Connections & Intrusion attempts Blocked": {
+          "Total C & C Connections Blocked": 0,
+          "Total Intrusion Attempts Blocked": 2114
+        }
+      },
+      "Top 03 Endpoints": {
+        "File Cleaned/Spyware": [
+          [
+            "PFTBLR-LT-400",
+            1
+          ]
+        ],
+        "File Cleaned/Malware": [
+          [
+            "TN-LT-976",
+            8
+          ],
+          [
+            "TN-LT-373",
+            2
+          ],
+          [
+            "TN-LT-486",
+            2
+          ]
+        ],
+        "File Deleted": [],
+        "C & C Connection Blocked": [],
+        "Intrusion Attempts Blocked": [
+          [
+            "TN-LT-1099",
+            1818
+          ],
+          [
+            "ND-WIN-004",
+            82
+          ],
+          [
+            "ND-WIN-001",
+            74
+          ]
+        ]
+      }
+    },
+    "SLO Summary": {
+      "SLO Summary": {
+        "Total No of Incidents Closed": 0,
+        "SLO Met": 0,
+        "SLO Not Met": 0
+      }
+    },
+    "V1 Workbench Incidents Summary": {
+      "V1 Workbench Incidents Summary": {
+        "P1": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P2": {
+          "Incidents Closed with Resolution": 3,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P3": {
+          "Incidents Closed with Resolution": 206,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P4": {
+          "Incidents Closed with Resolution": 1913,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        }
+      }
+    },
+    "SIEM Incidents Summary": {
+      "SIEM Incidents Summary": {
+        "P1": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P2": {
+          "Incidents Closed with Resolution": 643,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P3": {
+          "Incidents Closed with Resolution": 1197,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P4": {
+          "Incidents Closed with Resolution": 2062,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        }
+      }
+    },
+    "Pending Incidents Summary": {
+      "Pending Incidents Summary": [
+        {
+          "Incident Name": "A security group was deleted.",
+          "Priority": "P3",
+          "No of Occurance": 1
+        },
+        {
+          "Incident Name": "Admin login disabled",
+          "Priority": "P3",
+          "No of Occurance": 1
+        },
+        {
+          "Incident Name": "Hacking Tool Detection - Blocked",
+          "Priority": "P4",
+          "No of Occurance": 1
+        },
+        {
+          "Incident Name": "Targeted Attack Detection: Suspicious Hacking Tool in Suspicious Folder",
+          "Priority": "P2",
+          "No of Occurance": 1
+        },
+        {
+          "Incident Name": "Windows Logon Failed Attempt from Private IP",
+          "Priority": "P4",
+          "No of Occurance": 1
+        },
+        {
+          "Incident Name": "Possible Disabling of Antivirus Software",
+          "Priority": "P3",
+          "No of Occurance": 1
+        },
+        {
+          "Incident Name": "SSH Authorized Keys Modification - MacOS",
+          "Priority": "P4",
+          "No of Occurance": 1
+        }
+      ]
+    },
+    "Endpoint Feature Compliance": {
+      "Endpoint Feature Compliance": {
+        "XDR Endpoint Sensor Not Enabled": 399,
+        "Vulnerability Protection not Enabled": 31,
+        "XDR Endpoint Sensor, Vulnerability Protection Enabled": 2039
+      }
+    },
+    "Email Summary": {
+      "Email Status": {
+        "Quarantined": 19,
+        "Deleted": 0
+      },
+      "Top 03 Sender and Receipts": {
+        "Top 3 Senders": [
+          "noreply@zohopeople.com",
+          "noreply@email.teams.microsoft.com",
+          "trendmicrotscases@trendmicro.com"
+        ],
+        "Top 3 Receipts": [
+          "security_alert@eventussecurity.com",
+          "SOC_L2@eventussecurity.com",
+          "tejas.shah@eventussecurity.com"
+        ]
+      },
+      "Threat Type": {
+        "Malicious Files": 0,
+        "Malicious URLs": 2,
+        "Phishing": 0,
+        "Spoofing": 0,
+        "Suspicious Object": 0,
+        "Blocked Object": 0
+      }
+    },
+    "Risk Matrics": {
+      "Last Three Month Risk Score": {
+        "May": "NA",
+        "June": 58,
+        "July": 58
+      }
+    },
+    "Top Vulnerability Detected": {
+      "Top Vulnerabilities Detected": [
+        {
+          "CVE": "CVE-2023-24932",
+          "CVE impact score": 6.7
+        },
+        {
+          "CVE": "CVE-2021-4057",
+          "CVE impact score": 8.8
+        },
+        {
+          "CVE": "CVE-2023-4863",
+          "CVE impact score": 8.8
+        },
+        {
+          "CVE": "CVE-2024-4671",
+          "CVE impact score": 9.6
+        },
+        {
+          "CVE": "CVE-2022-35737",
+          "CVE impact score": 7.5
+        },
+        {
+          "CVE": "CVE-2020-6096",
+          "CVE impact score": 8.1
+        },
+        {
+          "CVE": "CVE-2020-8254",
+          "CVE impact score": 8.8
+        },
+        {
+          "CVE": "CVE-2022-31901",
+          "CVE impact score": 6.5
+        },
+        {
+          "CVE": "CVE-2022-29072",
+          "CVE impact score": 7.8
+        },
+        {
+          "CVE": "CVE-2022-39425",
+          "CVE impact score": 8.1
+        }
+      ]
+    },
+    "Product Assessment Report": {
+      "TM Products Summary": [
+        {
+          "TM Product": "Vision One",
+          "Connection Status": "Connected"
+        },
+        {
+          "TM Product": "Cloud One",
+          "Connection Status": "Connected"
+        },
+        {
+          "TM Product": "Apex Central",
+          "Connection Status": ""
+        },
+        {
+          "TM Product": "Cloud App security",
+          "Connection Status": ""
+        }
+      ],
+      "Third Party Products Summary": []
+    },
+    "Component Versions": {
+      "WorkLoad Protection": {
+        "Older": 549,
+        "Latest": 520,
+        "End of Life": 0
+      },
+      "Standard Endpoint Protection": {
+        "Older": 1228,
+        "Latest": 1440,
+        "End of Life": 0
+      }
+    }
+  }
+},
+{
+  "Eventus_June_Report": {
+    "Key Feature Adoption Rate of A1": {
+      "Key Feature Adoption Rate of A1": [
+        {
+          "Feature Name": "Vulnerability Protection",
+          "Total": 200,
+          "Count": 162,
+          "Rate": 81
+        },
+        {
+          "Feature Name": "Anti-Malware Scans",
+          "Total": 200,
+          "Count": 162,
+          "Rate": 81
+        },
+        {
+          "Feature Name": "Web Reputation",
+          "Total": 201,
+          "Count": 163,
+          "Rate": 81.1
+        },
+        {
+          "Feature Name": "Behavior Monitoring",
+          "Total": 201,
+          "Count": 163,
+          "Rate": 81.1
+        },
+        {
+          "Feature Name": "Predictive Machine Learning",
+          "Total": 201,
+          "Count": 163,
+          "Rate": 81.1
+        },
+        {
+          "Feature Name": "Smart Feedback",
+          "Total": 201,
+          "Count": 163,
+          "Rate": 81.1
+        },
+        {
+          "Feature Name": "Firewall",
+          "Total": 201,
+          "Count": 0,
+          "Rate": 0
+        },
+        {
+          "Feature Name": "Suspicious Connection Service",
+          "Total": 200,
+          "Count": 162,
+          "Rate": 81
+        },
+        {
+          "Feature Name": "Device Control",
+          "Total": 200,
+          "Count": 1,
+          "Rate": 0.5
+        },
+        {
+          "Feature Name": "Application Control",
+          "Total": 201,
+          "Count": 2,
+          "Rate": 1
+        }
+      ]
+    },
+    "Key Feature Adoption Rate of C1": {
+      "Key Feature Adoption Rate of C1": [
+        {
+          "Feature Name": "Intrusion Prevention System (IPS)",
+          "Total": 5,
+          "Count": 4,
+          "Rate": 80
+        },
+        {
+          "Feature Name": "Anti-malware",
+          "Total": 5,
+          "Count": 3,
+          "Rate": 60
+        },
+        {
+          "Feature Name": "Web Reputation",
+          "Total": 5,
+          "Count": 4,
+          "Rate": 80
+        },
+        {
+          "Feature Name": "Behavior Monitoring",
+          "Total": 5,
+          "Count": 5,
+          "Rate": 100
+        },
+        {
+          "Feature Name": "Predictive Machine Learning",
+          "Total": 5,
+          "Count": 5,
+          "Rate": 100
+        },
+        {
+          "Feature Name": "Smart Feedback",
+          "Total": 5,
+          "Count": 5,
+          "Rate": 100
+        },
+        {
+          "Feature Name": "Firewall",
+          "Total": 5,
+          "Count": 3,
+          "Rate": 60
+        },
+        {
+          "Feature Name": "Agent Self-Protection",
+          "Total": 5,
+          "Count": 0,
+          "Rate": 0
+        },
+        {
+          "Feature Name": "File Integrity Monitoring (FIM)",
+          "Total": 5,
+          "Count": 3,
+          "Rate": 60
+        },
+        {
+          "Feature Name": "Log Inspection",
+          "Total": 5,
+          "Count": 3,
+          "Rate": 60
+        },
+        {
+          "Feature Name": "Device Control",
+          "Total": "NA",
+          "Count": "NA",
+          "Rate": "NA"
+        },
+        {
+          "Feature Name": "Application Control",
+          "Total": 5,
+          "Count": 3,
+          "Rate": 60
+        }
+      ]
+    },
+    "Top Risk Users": {
+      "Top Risk Users": [
+        {
+          "User Name": "Ahmad Yanis",
+          "Risk Score": 81
+        }
+      ]
+    },
+    "Top Risk Device": {
+      "Top Risk Device": [
+        {
+          "Device Name": "DESKTOP-SA4HVRM",
+          "Risk Score": 70
+        },
+        {
+          "Device Name": "IN022194",
+          "Risk Score": 70
+        },
+        {
+          "Device Name": "IND022201",
+          "Risk Score": 70
+        }
+      ]
+    },
+    "Account Compromise Events": {
+      "Account Compromise Events": []
+    },
+    "Critical High Incidents Summary": {
+      "Critical/High Incidents Summary": [
+        {
+          "Impact-Priority": "P2 - High",
+          "Incident Title": "[Heuristic Attribute] Possible Malicious User Execution Behavior - 2",
+          "Findings and Actions Performed": ""
+        },
+        {
+          "Impact-Priority": "P2 - High",
+          "Incident Title": "Detection of Third-Party Tool Capable of Disabling Security Products - 3",
+          "Findings and Actions Performed": ""
+        },
+        {
+          "Impact-Priority": "P2 - High",
+          "Incident Title": "External Trigger Rule - 3",
+          "Findings and Actions Performed": ""
+        },
+        {
+          "Impact-Priority": "P2 - High",
+          "Incident Title": "[Heuristic Attribute] Possible OS Credential Dumping - 10",
+          "Findings and Actions Performed": ""
+        },
+        {
+          "Impact-Priority": "P2 - High",
+          "Incident Title": "Hacking Tool Detection in Documents Videos or Music Directory - 1",
+          "Findings and Actions Performed": ""
+        },
+        {
+          "Impact-Priority": "P2 - High",
+          "Incident Title": "Command And Control Detection In Windows Path - 1",
+          "Findings and Actions Performed": ""
+        },
+        {
+          "Impact-Priority": "P2 - High",
+          "Incident Title": "[Heuristic Attribute] Possible Data Encrypted for Impact - 3",
+          "Findings and Actions Performed": ""
+        },
+        {
+          "Impact-Priority": "P1 - Critical",
+          "Incident Title": "Ransomware Related Detections (Real-time Scan) - 1",
+          "Findings and Actions Performed": ""
+        },
+        {
+          "Impact-Priority": "P2 - High",
+          "Incident Title": "Potential Credential Dumping via Mimikatz - 2",
+          "Findings and Actions Performed": ""
+        },
+        {
+          "Impact-Priority": "P2 - High",
+          "Incident Title": "Ransomware Related Detections (Non-real Time Scan) - 1",
+          "Findings and Actions Performed": ""
+        },
+        {
+          "Impact-Priority": "P2 - High",
+          "Incident Title": "Suspect Powershell Download Crade Invocation towards Github - 1",
+          "Findings and Actions Performed": ""
+        },
+        {
+          "Impact-Priority": "P2 - High",
+          "Incident Title": "Possible LSASS Secrets or SAM Credential Dumping - 1",
+          "Findings and Actions Performed": ""
+        },
+        {
+          "Impact-Priority": "P2 - High",
+          "Incident Title": "Potential Credential Dumping via Hacking Tool - 1",
+          "Findings and Actions Performed": ""
+        },
+        {
+          "Impact-Priority": "P2 - High",
+          "Incident Title": "Decoy Document using DDE - 1",
+          "Findings and Actions Performed": ""
+        }
+      ]
+    },
+    "Executive Summary": {
+      "Incident Overview by SOC Team": [
+        {
+          "No of Incidents": 19,
+          "Name of Incident": "Suspicious Powershell Connection To Web Service",
+          "Description": "The adversary attempted to download a payload stored on a legitimate external web service."
+        },
+        {
+          "No of Incidents": 11,
+          "Name of Incident": "Possible Account Compromise - Atypical Travel",
+          "Description": "User account has a successful sign-in attempt originating from a location that is unusual based on the known travel behavior of the user."
+        },
+        {
+          "No of Incidents": 10,
+          "Name of Incident": "[Heuristic Attribute] Possible OS Credential Dumping",
+          "Description": "Detects Possible Dumping of OS Information Technique"
+        },
+        {
+          "No of Incidents": 8,
+          "Name of Incident": "Hacking Tool Detection - Blocked",
+          "Description": "A hacking tool, which is generally used for cracking computer and network security or by system administrators to test security, was detected and blocked on an endpoint."
+        },
+        {
+          "No of Incidents": 6,
+          "Name of Incident": "Eicar Test File Detection",
+          "Description": "Eicar test file is detected in the system."
+        }
+      ],
+      "Action Performed by SOC Team": [
+        {
+          "No of Incidents": 19,
+          "Name of Incident": "Suspicious Powershell Connection To Web Service",
+          "Action Performed": ""
+        },
+        {
+          "No of Incidents": 11,
+          "Name of Incident": "Possible Account Compromise - Atypical Travel",
+          "Action Performed": ""
+        },
+        {
+          "No of Incidents": 10,
+          "Name of Incident": "[Heuristic Attribute] Possible OS Credential Dumping",
+          "Action Performed": ""
+        },
+        {
+          "No of Incidents": 8,
+          "Name of Incident": "Hacking Tool Detection - Blocked",
+          "Action Performed": ""
+        },
+        {
+          "No of Incidents": 6,
+          "Name of Incident": "Eicar Test File Detection",
+          "Action Performed": ""
+        }
+      ],
+      "Recommendations by SOC Team": [
+        {
+          "No of Incidents": 19,
+          "Name of Incident": "Suspicious Powershell Connection To Web Service",
+          "Recommendations": ""
+        },
+        {
+          "No of Incidents": 11,
+          "Name of Incident": "Possible Account Compromise - Atypical Travel",
+          "Recommendations": ""
+        },
+        {
+          "No of Incidents": 10,
+          "Name of Incident": "[Heuristic Attribute] Possible OS Credential Dumping",
+          "Recommendations": ""
+        },
+        {
+          "No of Incidents": 8,
+          "Name of Incident": "Hacking Tool Detection - Blocked",
+          "Recommendations": ""
+        },
+        {
+          "No of Incidents": 6,
+          "Name of Incident": "Eicar Test File Detection",
+          "Recommendations": ""
+        }
+      ]
+    },
+    "Overall Incidents Summary": {
+      "Status Summary": {
+        "Incidents Closed with Resolution": 0,
+        "Incidents Closed without Acknowledgement": 0,
+        "Pending Incidents with SOC Team": 0
+      },
+      "Overall Incidents Summary": {
+        "P1": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P2": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P3": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P4": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        }
+      }
+    },
+    "Detailed Summary": {
+      "Total No of Incidents": {
+        "Total Incidents": 103,
+        "Month & Year": "6/2024"
+      },
+      "Risk Index": {
+        "Score": 44,
+        "Description": "The Risk Index is a comprehensive score based on the dynamic assessment of risk factors inclusive of exposure, attack risk, and security configurations risk. You can take company-wide remediation steps and preventive measures to lower the company-wide risk index over time."
+      },
+      "No of Highly Exploitable Unique CVEs": 131,
+      "No of Incidents Closed without acknowledgement": 0,
+      "Top incidents": [
+        {
+          "Incident Names with no of Occurrence": "Suspicious Powershell Connection To Web Service - 19",
+          "Priority - Impact": "P3 - Medium",
+          "Data Source": "SAE"
+        },
+        {
+          "Incident Names with no of Occurrence": "Possible Account Compromise - Atypical Travel - 11",
+          "Priority - Impact": "P4 - Low",
+          "Data Source": "SAE"
+        },
+        {
+          "Incident Names with no of Occurrence": "[Heuristic Attribute] Possible OS Credential Dumping - 10",
+          "Priority - Impact": "P2 - High",
+          "Data Source": "SAE"
+        },
+        {
+          "Incident Names with no of Occurrence": "Hacking Tool Detection - Blocked - 8",
+          "Priority - Impact": "P3 - Medium",
+          "Data Source": "SAE"
+        },
+        {
+          "Incident Names with no of Occurrence": "Eicar Test File Detection - 6",
+          "Priority - Impact": "P4 - Low",
+          "Data Source": "SAE"
+        },
+        {
+          "No of Incidents": 54
+        }
+      ]
+    },
+    "Vulnerability Assessment Report": {
+      "Internal Assets": {
+        "Vulnerable Endpoint Percentage": 37,
+        "Highly-Exploitable CVE Density": 1,
+        "Devices with Legacy Windows Systems": 0,
+        "Average Unpatched Time": 0,
+        "Mean Time to Patch (MTTP)": 2,
+        "Highly-Exploitable Unique CVEs": 131
+      }
+    },
+    "System Configuration Report": {
+      "System Configuration Report": {
+        "Accounts with Weak Authentication": 3,
+        "Accounts that Increase Attack Surface Risk": 78,
+        "Accounts with Excessive Privilege": 0,
+        "Hosts with Insecure Connection Issues": 3
+      }
+    },
+    "Agent Version Summary": {
+      "All Agents Version Summary": {
+        "Total (Endpoint + Server)": 201,
+        "Latest Version (Endpoint + Server)": 174,
+        "Older Version (Endpoint + Server)": 27,
+        "End-of-Life version (Endpoint + Server)": 0
+      }
+    },
+    "Detection Summary from A1": {
+      "Detection Summary form Apex One": {
+        "Virus/Malware & Spyware/Grayware": {
+          "File Cleaned (Virus/Malware + Spyware/Grayware)": 567,
+          "File Quarantine (Virus / Malware)": 95,
+          "Restart Action Required (Virus / Malware)": 0,
+          "File Deleted (Virus / Malware)": 0
+        },
+        "C & C Connections & Intrusion attempts Blocked": {
+          "Total C & C Connections Blocked": 14435,
+          "Total Intrusion Attempts Blocked": 10
+        }
+      },
+      "Top 03 Endpoints": {
+        "File Cleaned/Spyware": [
+          [
+            "IN022157",
+            187
+          ],
+          [
+            "WINDEV2401EVAL",
+            70
+          ],
+          [
+            "IN022149",
+            2
+          ]
+        ],
+        "File Cleaned/Malware": [
+          [
+            "WINDEV2401EVAL",
+            193
+          ],
+          [
+            "IN022157",
+            106
+          ],
+          [
+            "IN079529",
+            2
+          ]
+        ],
+        "File Deleted": [],
+        "C & C Connection Blocked": [
+          [
+            "WINDEV2401EVAL",
+            10910
+          ],
+          [
+            "IN022136",
+            2827
+          ],
+          [
+            "IN079529",
+            396
+          ]
+        ],
+        "Intrusion Attempts Blocked": [
+          [
+            "IN0331401",
+            10
+          ]
+        ]
+      }
+    },
+    "SLO Summary": {
+      "SLO Summary": {
+        "Total No of Incidents Closed": 0,
+        "SLO Met": 0,
+        "SLO Not Met": 0
+      }
+    },
+    "V1 Workbench Incidents Summary": {
+      "V1 Workbench Incidents Summary": {
+        "P1": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P2": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P3": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P4": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        }
+      }
+    },
+    "SIEM Incidents Summary": {
+      "SIEM Incidents Summary": {
+        "P1": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P2": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P3": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P4": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        }
+      }
+    },
+    "Pending Incidents Summary": {
+      "Pending Incidents Summary": []
+    },
+    "Endpoint Feature Compliance": {
+      "Endpoint Feature Compliance": {
+        "XDR Endpoint Sensor Not Enabled": 17,
+        "Vulnerability Protection not Enabled": 38,
+        "XDR Endpoint Sensor, Vulnerability Protection Enabled": 199
+      }
+    },
+    "Email Summary": {
+      "Email Status": {
+        "Quarantined": 19,
+        "Deleted": 0
+      },
+      "Top 03 Sender and Receipts": {
+        "Top 3 Senders": [
+          "noreply@zohopeople.com",
+          "noreply@email.teams.microsoft.com",
+          "trendmicrotscases@trendmicro.com"
+        ],
+        "Top 3 Receipts": [
+          "security_alert@eventussecurity.com",
+          "SOC_L2@eventussecurity.com",
+          "soc.manager@eventussecurity.com"
+        ]
+      },
+      "Threat Type": {
+        "Malicious Files": 0,
+        "Malicious URLs": 2,
+        "Phishing": 0,
+        "Spoofing": 0,
+        "Suspicious Object": 0,
+        "Blocked Object": 0
+      }
+    },
+    "Risk Matrics": {
+      "Last Three Month Risk Score": {
+        "April": "NA",
+        "May": "NA",
+        "June": 44
+      }
+    },
+    "Top Vulnerability Detected": {
+      "Top Vulnerabilities Detected": [
+        {
+          "CVE": "CVE-2023-20178",
+          "CVE impact score": 7.8
+        },
+        {
+          "CVE": "CVE-2023-22098",
+          "CVE impact score": 8.2
+        },
+        {
+          "CVE": "CVE-2024-38021",
+          "CVE impact score": 8.8
+        },
+        {
+          "CVE": "CVE-2024-32002",
+          "CVE impact score": 9
+        },
+        {
+          "CVE": "CVE-2018-4878",
+          "CVE impact score": 9.8
+        },
+        {
+          "CVE": "CVE-2022-21449",
+          "CVE impact score": 7.5
+        },
+        {
+          "CVE": "CVE-2018-11529",
+          "CVE impact score": 8
+        },
+        {
+          "CVE": "CVE-2018-20250",
+          "CVE impact score": 7.8
+        },
+        {
+          "CVE": "CVE-2020-13699",
+          "CVE impact score": 8.8
+        },
+        {
+          "CVE": "CVE-2021-4057",
+          "CVE impact score": 8.8
+        }
+      ]
+    },
+    "Product Assessment Report": {
+      "TM Products Summary": [
+        {
+          "TM Product": "Vision One",
+          "Connection Status": "Connected"
+        },
+        {
+          "TM Product": "Cloud One",
+          "Connection Status": "Connected"
+        },
+        {
+          "TM Product": "Apex Central",
+          "Connection Status": ""
+        },
+        {
+          "TM Product": "Cloud App security",
+          "Connection Status": ""
+        }
+      ],
+      "Third Party Products Summary": []
+    },
+    "Component Versions": {
+      "WorkLoad Protection": {
+        "Older": 1,
+        "Latest": 0,
+        "End of Life": 0
+      },
+      "Standard Endpoint Protection": {
+        "Older": 199,
+        "Latest": 186,
+        "End of Life": 0
+      }
+    }
+  }
+},
+{
+  "PFM_June_Report": {
+    "Key Feature Adoption Rate of A1": {
+      "Key Feature Adoption Rate of A1": [
+        {
+          "Feature Name": "Vulnerability Protection",
+          "Total": 1374,
+          "Count": 1343,
+          "Rate": 97.7
+        },
+        {
+          "Feature Name": "Anti-Malware Scans",
+          "Total": 1489,
+          "Count": 1458,
+          "Rate": 97.9
+        },
+        {
+          "Feature Name": "Web Reputation",
+          "Total": 2082,
+          "Count": 2035,
+          "Rate": 97.7
+        },
+        {
+          "Feature Name": "Behavior Monitoring",
+          "Total": 1956,
+          "Count": 1919,
+          "Rate": 98.1
+        },
+        {
+          "Feature Name": "Predictive Machine Learning",
+          "Total": 2071,
+          "Count": 2034,
+          "Rate": 98.2
+        },
+        {
+          "Feature Name": "Smart Feedback",
+          "Total": 2082,
+          "Count": 2051,
+          "Rate": 98.5
+        },
+        {
+          "Feature Name": "Firewall",
+          "Total": 1967,
+          "Count": 0,
+          "Rate": 0
+        },
+        {
+          "Feature Name": "Suspicious Connection Service",
+          "Total": 1374,
+          "Count": 1337,
+          "Rate": 97.3
+        },
+        {
+          "Feature Name": "Device Control",
+          "Total": 1719,
+          "Count": 342,
+          "Rate": 19.9
+        },
+        {
+          "Feature Name": "Application Control",
+          "Total": 1967,
+          "Count": 1925,
+          "Rate": 97.9
+        }
+      ]
+    },
+    "Key Feature Adoption Rate of C1": {
+      "Key Feature Adoption Rate of C1": [
+        {
+          "Feature Name": "Intrusion Prevention System (IPS)",
+          "Total": 840,
+          "Count": 585,
+          "Rate": 70
+        },
+        {
+          "Feature Name": "Anti-malware",
+          "Total": 840,
+          "Count": 585,
+          "Rate": 70
+        },
+        {
+          "Feature Name": "Web Reputation",
+          "Total": 840,
+          "Count": 585,
+          "Rate": 70
+        },
+        {
+          "Feature Name": "Behavior Monitoring",
+          "Total": 840,
+          "Count": 840,
+          "Rate": 100
+        },
+        {
+          "Feature Name": "Predictive Machine Learning",
+          "Total": 840,
+          "Count": 840,
+          "Rate": 100
+        },
+        {
+          "Feature Name": "Smart Feedback",
+          "Total": 840,
+          "Count": 840,
+          "Rate": 100
+        },
+        {
+          "Feature Name": "Firewall",
+          "Total": 840,
+          "Count": 0,
+          "Rate": 0
+        },
+        {
+          "Feature Name": "Agent Self-Protection",
+          "Total": 840,
+          "Count": 227,
+          "Rate": 27
+        },
+        {
+          "Feature Name": "File Integrity Monitoring (FIM)",
+          "Total": 840,
+          "Count": 585,
+          "Rate": 70
+        },
+        {
+          "Feature Name": "Log Inspection",
+          "Total": 840,
+          "Count": 585,
+          "Rate": 70
+        },
+        {
+          "Feature Name": "Device Control",
+          "Total": "NA",
+          "Count": "NA",
+          "Rate": "NA"
+        },
+        {
+          "Feature Name": "Application Control",
+          "Total": 840,
+          "Count": 585,
+          "Rate": 70
+        }
+      ]
+    },
+    "Top Risk Users": {
+      "Top Risk Users": [
+        {
+          "User Name": "Sachindra Nagendra",
+          "Risk Score": 73
+        },
+        {
+          "User Name": "Prathik M",
+          "Risk Score": 72
+        },
+        {
+          "User Name": "Avinash Sunil",
+          "Risk Score": 70
+        }
+      ]
+    },
+    "Top Risk Device": {
+      "Top Risk Device": [
+        {
+          "Device Name": "weur-pr-wip-v1",
+          "Risk Score": 83
+        },
+        {
+          "Device Name": "mum-pr-asp-v2",
+          "Risk Score": 83
+        },
+        {
+          "Device Name": "weur-pr-ez-v1",
+          "Risk Score": 82
+        },
+        {
+          "Device Name": "PFT-DESIGNER6",
+          "Risk Score": 80
+        },
+        {
+          "Device Name": "weur-ua-pmd-v1",
+          "Risk Score": 79
+        },
+        {
+          "Device Name": "ir-ib-asp-v1",
+          "Risk Score": 79
+        },
+        {
+          "Device Name": "weur-ua-mdb-v1",
+          "Risk Score": 79
+        },
+        {
+          "Device Name": "weur-ua-ssrs-v1",
+          "Risk Score": 79
+        },
+        {
+          "Device Name": "tndsea-dm",
+          "Risk Score": 77
+        },
+        {
+          "Device Name": "TN-MHQS-1",
+          "Risk Score": 75
+        }
+      ]
+    },
+    "Account Compromise Events": {
+      "Account Compromise Events": [
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Prathik M",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Prathik M",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Prathik M",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Prathik M",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Prathik M",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Prathik M",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Prathik M",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Prathik M",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Prathik M",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Prathik M",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Prathik M",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Sachindra Nagendra",
+          "Event Risk": "high"
+        },
+        {
+          "Risk Event": "Leaked Account Identification",
+          "Data Source": "Dark Web",
+          "Asset": "Avinash Sunil",
+          "Event Risk": "high"
+        }
+      ]
+    },
+    "Critical High Incidents Summary": {
+      "Critical/High Incidents Summary": [
+        {
+          "Impact-Priority": "P2 - High",
+          "Incident Title": "[Heuristic Attribute] Possible Stealing or Forging of Kerberos Tickets - 2",
+          "Findings and Actions Performed": ""
+        }
+      ]
+    },
+    "Executive Summary": {
+      "Incident Overview by SOC Team": [
+        {
+          "No of Incidents": 2009,
+          "Name of Incident": "Multiple Failed Logons via Windows Event",
+          "Description": "Detects multiple occurrence of failed logons via Windows Event"
+        },
+        {
+          "No of Incidents": 205,
+          "Name of Incident": "Input Capture via Password Prompt - MacOS",
+          "Description": "Adversaries may mimic common operating system GUI components to prompt users for credentials with a seemingly legitimate prompt."
+        },
+        {
+          "No of Incidents": 162,
+          "Name of Incident": "Mac Sandbox Discovery",
+          "Description": "Possible attempts to check sandbox environment to evade detection were made."
+        },
+        {
+          "No of Incidents": 15,
+          "Name of Incident": "Attempt of Disabling Antivirus Software",
+          "Description": "An attempt to disable antivirus software was detected."
+        },
+        {
+          "No of Incidents": 4,
+          "Name of Incident": "SSH Authorized Keys Modification - MacOS",
+          "Description": "Modify contents of user's SSH public keys to maintain persistence on victim host."
+        }
+      ],
+      "Action Performed by SOC Team": [
+        {
+          "No of Incidents": 2009,
+          "Name of Incident": "Multiple Failed Logons via Windows Event",
+          "Action Performed": ""
+        },
+        {
+          "No of Incidents": 205,
+          "Name of Incident": "Input Capture via Password Prompt - MacOS",
+          "Action Performed": ""
+        },
+        {
+          "No of Incidents": 162,
+          "Name of Incident": "Mac Sandbox Discovery",
+          "Action Performed": ""
+        },
+        {
+          "No of Incidents": 15,
+          "Name of Incident": "Attempt of Disabling Antivirus Software",
+          "Action Performed": ""
+        },
+        {
+          "No of Incidents": 4,
+          "Name of Incident": "SSH Authorized Keys Modification - MacOS",
+          "Action Performed": ""
+        }
+      ],
+      "Recommendations by SOC Team": [
+        {
+          "No of Incidents": 2009,
+          "Name of Incident": "Multiple Failed Logons via Windows Event",
+          "Recommendations": ""
+        },
+        {
+          "No of Incidents": 205,
+          "Name of Incident": "Input Capture via Password Prompt - MacOS",
+          "Recommendations": ""
+        },
+        {
+          "No of Incidents": 162,
+          "Name of Incident": "Mac Sandbox Discovery",
+          "Recommendations": ""
+        },
+        {
+          "No of Incidents": 15,
+          "Name of Incident": "Attempt of Disabling Antivirus Software",
+          "Recommendations": ""
+        },
+        {
+          "No of Incidents": 4,
+          "Name of Incident": "SSH Authorized Keys Modification - MacOS",
+          "Recommendations": ""
+        }
+      ]
+    },
+    "Overall Incidents Summary": {
+      "Status Summary": {
+        "Incidents Closed with Resolution": 7137,
+        "Incidents Closed without Acknowledgement": 1,
+        "Pending Incidents with SOC Team": 0
+      },
+      "Overall Incidents Summary": {
+        "P1": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P2": {
+          "Incidents Closed with Resolution": 8,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P3": {
+          "Incidents Closed with Resolution": 3296,
+          "Incidents Closed without Acknowledgement": 1,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P4": {
+          "Incidents Closed with Resolution": 3833,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        }
+      }
+    },
+    "Detailed Summary": {
+      "Total No of Incidents": {
+        "Total Incidents": 2412,
+        "Month & Year": "6/2024"
+      },
+      "Risk Index": {
+        "Score": 58,
+        "Description": "The Risk Index is a comprehensive score based on the dynamic assessment of risk factors inclusive of exposure, attack risk, and security configurations risk. You can take company-wide remediation steps and preventive measures to lower the company-wide risk index over time."
+      },
+      "No of Highly Exploitable Unique CVEs": 1531,
+      "No of Incidents Closed without acknowledgement": 1,
+      "Top incidents": [
+        {
+          "Incident Names with no of Occurrence": "Multiple Failed Logons via Windows Event - 2009",
+          "Priority - Impact": "P4 - Low",
+          "Data Source": "SAE"
+        },
+        {
+          "Incident Names with no of Occurrence": "Input Capture via Password Prompt - MacOS - 205",
+          "Priority - Impact": "P3 - Medium",
+          "Data Source": "SAE"
+        },
+        {
+          "Incident Names with no of Occurrence": "Mac Sandbox Discovery - 162",
+          "Priority - Impact": "P3 - Medium",
+          "Data Source": "SAE"
+        },
+        {
+          "Incident Names with no of Occurrence": "Attempt of Disabling Antivirus Software - 15",
+          "Priority - Impact": "P3 - Medium",
+          "Data Source": "SAE"
+        },
+        {
+          "Incident Names with no of Occurrence": "SSH Authorized Keys Modification - MacOS - 4",
+          "Priority - Impact": "P4 - Low",
+          "Data Source": "SAE"
+        },
+        {
+          "No of Incidents": 2395
+        }
+      ]
+    },
+    "Vulnerability Assessment Report": {
+      "Internal Assets": {
+        "Vulnerable Endpoint Percentage": 77,
+        "Highly-Exploitable CVE Density": 45,
+        "Devices with Legacy Windows Systems": 176,
+        "Average Unpatched Time": 13,
+        "Mean Time to Patch (MTTP)": 27,
+        "Highly-Exploitable Unique CVEs": 1531
+      }
+    },
+    "System Configuration Report": {
+      "System Configuration Report": {
+        "Accounts with Weak Authentication": 288,
+        "Accounts that Increase Attack Surface Risk": 561,
+        "Accounts with Excessive Privilege": 1,
+        "Hosts with Insecure Connection Issues": 6
+      }
+    },
+    "Agent Version Summary": {
+      "All Agents Version Summary": {
+        "Total (Endpoint + Server)": 2082,
+        "Latest Version (Endpoint + Server)": 1843,
+        "Older Version (Endpoint + Server)": 220,
+        "End-of-Life version (Endpoint + Server)": 19
+      }
+    },
+    "Detection Summary from A1": {
+      "Detection Summary form Apex One": {
+        "Virus/Malware & Spyware/Grayware": {
+          "File Cleaned (Virus/Malware + Spyware/Grayware)": 42,
+          "File Quarantine (Virus / Malware)": 7,
+          "Restart Action Required (Virus / Malware)": 0,
+          "File Deleted (Virus / Malware)": 0
+        },
+        "C & C Connections & Intrusion attempts Blocked": {
+          "Total C & C Connections Blocked": 34,
+          "Total Intrusion Attempts Blocked": 5138
+        }
+      },
+      "Top 03 Endpoints": {
+        "File Cleaned/Spyware": [
+          [
+            "TN-LT-1101",
+            2
+          ],
+          [
+            "TNAPP-5-527",
+            2
+          ],
+          [
+            "TN-LT-1121",
+            2
+          ]
+        ],
+        "File Cleaned/Malware": [
+          [
+            "TN-LT-976",
+            8
+          ],
+          [
+            "PFT-KGFX-05",
+            4
+          ],
+          [
+            "TN-LOG-11",
+            2
+          ]
+        ],
+        "File Deleted": [],
+        "C & C Connection Blocked": [
+          [
+            "TNAPP-6-618",
+            2
+          ],
+          [
+            "TNAPP-6-611",
+            2
+          ],
+          [
+            "TNAPP-6-609",
+            2
+          ]
+        ],
+        "Intrusion Attempts Blocked": [
+          [
+            "TN-LT-1099",
+            3868
+          ],
+          [
+            "ND-WIN-001",
+            163
+          ],
+          [
+            "ND-WIN-004",
+            163
+          ]
+        ]
+      }
+    },
+    "SLO Summary": {
+      "SLO Summary": {
+        "Total No of Incidents Closed": 0,
+        "SLO Met": 0,
+        "SLO Not Met": 0
+      }
+    },
+    "V1 Workbench Incidents Summary": {
+      "V1 Workbench Incidents Summary": {
+        "P1": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P2": {
+          "Incidents Closed with Resolution": 2,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P3": {
+          "Incidents Closed with Resolution": 392,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P4": {
+          "Incidents Closed with Resolution": 2044,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        }
+      }
+    },
+    "SIEM Incidents Summary": {
+      "SIEM Incidents Summary": {
+        "P1": {
+          "Incidents Closed with Resolution": 0,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P2": {
+          "Incidents Closed with Resolution": 6,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P3": {
+          "Incidents Closed with Resolution": 2904,
+          "Incidents Closed without Acknowledgement": 1,
+          "Pending Incidents with SOC Team": 0
+        },
+        "P4": {
+          "Incidents Closed with Resolution": 1789,
+          "Incidents Closed without Acknowledgement": 0,
+          "Pending Incidents with SOC Team": 0
+        }
+      }
+    },
+    "Pending Incidents Summary": {
+      "Pending Incidents Summary": []
+    },
+    "Endpoint Feature Compliance": {
+      "Endpoint Feature Compliance": {
+        "XDR Endpoint Sensor Not Enabled": 399,
+        "Vulnerability Protection not Enabled": 31,
+        "XDR Endpoint Sensor, Vulnerability Protection Enabled": 2042
+      }
+    },
+    "Email Summary": {
+      "Email Status": {
+        "Quarantined": 19,
+        "Deleted": 0
+      },
+      "Top 03 Sender and Receipts": {
+        "Top 3 Senders": [
+          "noreply@zohopeople.com",
+          "noreply@email.teams.microsoft.com",
+          "trendmicrotscases@trendmicro.com"
+        ],
+        "Top 3 Receipts": [
+          "security_alert@eventussecurity.com",
+          "SOC_L2@eventussecurity.com",
+          "soc.manager@eventussecurity.com"
+        ]
+      },
+      "Threat Type": {
+        "Malicious Files": 0,
+        "Malicious URLs": 2,
+        "Phishing": 0,
+        "Spoofing": 0,
+        "Suspicious Object": 0,
+        "Blocked Object": 0
+      }
+    },
+    "Risk Matrics": {
+      "Last Three Month Risk Score": {
+        "April": "NA",
+        "May": "NA",
+        "June": 58
+      }
+    },
+    "Top Vulnerability Detected": {
+      "Top Vulnerabilities Detected": [
+        {
+          "CVE": "CVE-2023-24932",
+          "CVE impact score": 6.7
+        },
+        {
+          "CVE": "CVE-2021-4057",
+          "CVE impact score": 8.8
+        },
+        {
+          "CVE": "CVE-2023-4863",
+          "CVE impact score": 8.8
+        },
+        {
+          "CVE": "CVE-2024-4671",
+          "CVE impact score": 9.6
+        },
+        {
+          "CVE": "CVE-2022-35737",
+          "CVE impact score": 7.5
+        },
+        {
+          "CVE": "CVE-2020-6096",
+          "CVE impact score": 8.1
+        },
+        {
+          "CVE": "CVE-2020-8254",
+          "CVE impact score": 8.8
+        },
+        {
+          "CVE": "CVE-2022-31901",
+          "CVE impact score": 6.5
+        },
+        {
+          "CVE": "CVE-2022-29072",
+          "CVE impact score": 7.8
+        },
+        {
+          "CVE": "CVE-2022-39425",
+          "CVE impact score": 8.1
+        }
+      ]
+    },
+    "Product Assessment Report": {
+      "TM Products Summary": [
+        {
+          "TM Product": "Vision One",
+          "Connection Status": "Connected"
+        },
+        {
+          "TM Product": "Cloud One",
+          "Connection Status": "Connected"
+        },
+        {
+          "TM Product": "Apex Central",
+          "Connection Status": ""
+        },
+        {
+          "TM Product": "Cloud App security",
+          "Connection Status": ""
+        }
+      ],
+      "Third Party Products Summary": []
+    },
+    "Component Versions": {
+      "WorkLoad Protection": {
+        "Older": 549,
+        "Latest": 520,
+        "End of Life": 0
+      },
+      "Standard Endpoint Protection": {
+        "Older": 1347,
+        "Latest": 1438,
+        "End of Life": 0
+      }
+    }
+  }
+}]

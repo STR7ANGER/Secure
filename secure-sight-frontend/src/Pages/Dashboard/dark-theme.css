@@ -1,0 +1,15 @@
+/* dark-theme.css */
+
+/* Add your desired gradient dark background here */
+body {
+    background-image: linear-gradient(to bottom right, #222, #444);
+    /* Add other common styles for the dark theme, e.g., color, font-family, etc. */
+  }
+  
+  /* Define styles for other components to fit into the dark theme */
+  /* For example, you can override text colors to make them more readable on the dark background */
+  h1, h2, h3, h4, h5, h6, p {
+    color: #fff; /* White text on dark background */
+  }
+  
+  /* Add more styles as needed to create a consistent dark theme across your app */

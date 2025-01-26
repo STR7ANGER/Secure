@@ -1,0 +1,18 @@
+/* TimeLine CSS */
+.hori-timeline-desc .slick-prev::before,
+.hori-timeline-desc .slick-next::before{
+    display: none;
+}
+
+ .slick-prev {
+    left: 150px;
+    top: 40px;
+    z-index: 1;
+}
+
+.slick-next {
+    right: -150px;
+    top: 40px;
+    z-index: 1;
+}
+

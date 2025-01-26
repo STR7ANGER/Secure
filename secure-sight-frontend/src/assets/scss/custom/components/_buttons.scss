@@ -1,0 +1,70 @@
+//
+// _buttons.scss
+//
+
+button,
+a {
+    outline: none !important;
+}
+
+.btn-light {
+    border: 1px solid darken($light, 2%);
+}
+
+// Rounded Buttons
+.btn-rounded {
+    border-radius: 30px;
+}
+
+.btn-dark,
+.btn-secondary {
+    color: $gray-200 !important;
+}
+
+.btn-outline-light {
+    color: $gray-900;
+}
+
+//
+// Soft Buttons
+//
+
+@mixin button-variant-soft($bg) {
+    color: $bg;
+    background-color: rgba($bg, 0.1);
+    border-color: transparent;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $white;
+        background-color: $bg;
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .btn-soft-#{$color} {
+        @include button-variant-soft($value);
+    }
+}
+
+.btn-group-vertical {
+    label {
+        margin-bottom: 0;
+    }
+}
+
+.btn-lg-submit {
+    background-color: #27294F;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Add shadow effect
+    transition: all 0.3s ease; // Add transition for smooth hover effect
+    --bs-btn-active-bg: #27294F;
+    --bs-btn-hover-bg: #27294F;
+    &:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+}

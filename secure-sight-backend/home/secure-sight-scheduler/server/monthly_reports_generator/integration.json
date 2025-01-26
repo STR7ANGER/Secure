@@ -1,0 +1,40 @@
+{
+    "name": "monthly_reports_generator",
+    "display_name": "monthly_reports_generator",
+    "config": {
+        "properties": {
+            "date": {
+                "type": "string",
+                "isPathArg": "false",
+                 "position": "1"
+            },
+            "tenants":{
+                "type": "string",
+                "isPathArg": "false",
+                 "position": "2"
+            }
+        }
+    },
+    "actions": [
+        {
+            "name": "monthly_reports_generator",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "example_input",
+                    "type": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "example_output",
+                    "type": "string"
+                },
+                {
+                    "name": "api_key",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

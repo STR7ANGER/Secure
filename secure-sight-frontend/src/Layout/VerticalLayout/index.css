@@ -1,0 +1,26 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#layout-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 30px); /* Adjust 60px based on your header height */
+}
+
+/* Add if you have any specific sidebar styles */
+.sidebar {
+  flex-shrink: 0;
+  /* Add your existing sidebar styles */
+}

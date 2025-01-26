@@ -1,0 +1,22 @@
+{
+    "info": {
+        "dbName": "orion",
+        "connectorId": "64cad3f39ce2f6d71691047c"
+    },
+    "data": {
+        "config": {
+            "api_key": {
+                "type": "string",
+                "isPathArg": "false",
+                "position": "1"
+            },
+            "secret_key": {
+                "type": "string",
+                "isPathArg": "false",
+                "position": "2"
+            }
+        },
+        "connectorBasePath": "aws_inventory",
+        "connectorFileNameWithExtension": "inventry.py"
+    }
+}

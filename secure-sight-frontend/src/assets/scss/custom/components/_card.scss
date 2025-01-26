@@ -1,0 +1,67 @@
+//
+// _card.scss
+//
+
+.card {
+    margin-bottom: $grid-gutter-width;
+    box-shadow: $box-shadow;
+}
+
+.card-drop {
+    font-size: 20px;
+    line-height: 0;
+    color: inherit;
+}
+
+.card-title {
+    font-size: 15px;
+    margin: 0 0 7px 0;
+    font-weight: $font-weight-medium;
+}
+
+.card-title-desc {
+    color: $card-title-desc;
+    margin-bottom: 24px;
+}
+
+// card color variant
+
+@mixin card-variant($bg) {
+    color: $white;
+    background-color: $bg;
+}
+
+@each $color, $value in $theme-colors {
+    .card-#{$color} {
+        @include card-variant($value);
+        .card-header {
+            background-color: rgba($white, 0.1);
+            color: $white;
+        }
+        .card-title {
+            color: $white;
+        }
+    }
+}
+
+
+// card border variant
+
+@mixin card-border-variant($bg) {
+    border: 1px solid $bg;
+
+    .card-header {
+        border-bottom: 1px solid $bg;
+        background: transparent;
+    }
+    .card-footer {
+        border-top: 1px solid $bg;
+        background: transparent;
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .card-border-#{$color} {
+        @include card-border-variant($value);
+    }
+}

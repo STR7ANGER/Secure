@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "64bec2c8af7811518e353389"
+  },
+  "username": "master",
+  "password": "12345",
+  "email": "Master@unity.com",
+  "role": "tenant_admin",
+  "full_name": "masterone"
+},
+{
+  "_id": {
+    "$oid": "64c589e1038c361ed82457b9"
+  },
+  "username": "adminone",
+  "password": "admin1",
+  "email": "adminone@unity.com",
+  "role": "unity_admin",
+  "full_name": "Admin One"
+},
+{
+  "_id": {
+    "$oid": "64c7bf75038c361ed82457ba"
+  },
+  "username": "admintwo",
+  "password": "admin2",
+  "email": "admintwo@unity.com",
+  "role": "unity_admin",
+  "full_name": "Admin Two"
+},
+{
+  "_id": {
+    "$oid": "64c7bf94038c361ed82457bb"
+  },
+  "username": "userone",
+  "password": "user1",
+  "email": "userone@unity.com",
+  "role": "unity_admin",
+  "full_name": "User One"
+}]

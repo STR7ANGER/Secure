@@ -1,0 +1,23 @@
+/* Flot chart */
+.flot-charts-height {
+  height: 320px;
+}
+
+.flotTip {
+  padding: 8px 12px;
+  background-color: $dropdown-bg !important;
+  z-index: 100;
+  color: $gray-600 !important;
+  box-shadow: $box-shadow;
+  border-radius: 4px;
+}
+
+.legendLabel {
+  color: $gray-500;
+}
+
+.legend {
+  div {
+    background-color: transparent !important;
+  }
+}

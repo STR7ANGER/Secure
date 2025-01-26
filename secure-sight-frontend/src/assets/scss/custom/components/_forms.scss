@@ -1,0 +1,74 @@
+//
+// Forms.scss
+//
+
+// checkbox input right
+
+.form-check-right {
+    padding-left: 0;
+    display: inline-block;
+    padding-right: $form-check-padding-start;
+    .form-check-input {
+        float: right;
+        margin-left: 0;
+        margin-right: $form-check-padding-start * -1;
+    }
+    .form-check-label {
+        display: block;
+    }
+}
+
+.form-check {
+    position: relative;
+    text-align: left /*rtl: right*/;
+    user-select: none;
+}
+
+.form-check-input,
+.form-check-label {
+    cursor: pointer;
+    margin-bottom: 0;
+    user-select: none;
+}
+
+// Switch sizes
+
+.form-switch-md {
+    padding-left: 2.5rem;
+    min-height: 24px;
+    line-height: 24px;
+    .form-check-input {
+        width: 40px;
+        height: 20px;
+        left: -0.5rem;
+        position: relative;
+    }
+
+    .form-check-label {
+        vertical-align: middle;
+    }
+}
+
+.form-switch-lg {
+    padding-left: 2.75rem;
+    min-height: 28px;
+    line-height: 28px;
+    .form-check-input {
+        width: 48px;
+        height: 24px;
+        left: -0.75rem;
+        position: relative;
+    }
+}
+
+.elevated-input {
+    background-color: #f4f4f4;
+    border: 2px solid #ddd;
+    color: #444;
+    height: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Add shadow effect
+    transition: all 0.3s ease; // Add transition for smooth hover effect
+    &:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+}

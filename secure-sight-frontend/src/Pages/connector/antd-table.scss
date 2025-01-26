@@ -1,0 +1,44 @@
+/* Assuming your table component is rendered inside a container with a class "dark-table-container" */
+
+/* Add a dark background color to the table */
+.dark-table-container .ant-table {
+    background-color: #150808;
+}
+
+/* Style the table header */
+.dark-table-container .ant-table-thead>tr>th {
+    background-color: #202020;
+    color: #fff;
+}
+
+/* Style the table rows */
+.dark-table-container .ant-table-tbody>tr>td {
+    background-color: #252525;
+    color: #fff;
+}
+
+/* Style the selected row */
+.dark-table-container .ant-table-tbody>tr.ant-table-row-selected>td {
+    background-color: #6c6969;
+}
+
+.ant-modal .ant-modal-content {
+    background-color: #21283e;
+}
+
+.ant-modal .ant-modal-header {
+    background: #21283e;
+}
+
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector  {
+    background-color: #21283e;
+    color: white;
+}
+
+.ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
+    color: #6c6969;
+}
+
+.ant-modal .ant-modal-title {
+    color: white
+}

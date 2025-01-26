@@ -1,0 +1,17 @@
+.scroll-item-horizontal {
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  overflow: scroll;
+  height: 350px;
+}
+
+.cluster-table-row {
+  width: 1000px !important;
+}
+
+.violation-table-text-left {
+  text-align: left !important;
+}
+
+ 

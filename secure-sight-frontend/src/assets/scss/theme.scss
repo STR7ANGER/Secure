@@ -1,0 +1,113 @@
+@import "./icons.scss";
+
+// Dark Theme
+@import "./bootstrap-dark.scss";
+@import "./app-dark.scss";
+
+// Light Theme
+// @import "./bootstrap.scss";
+// @import "./app.scss";
+
+// rtl Direction
+// @import "./custom/rtl/general-rtl";
+// @import "./custom/rtl/bootstrap-rtl";
+// @import "./custom/rtl/spacing-rtl";
+// @import "./custom/rtl/float-rtl";
+// @import "./custom/rtl/text-rtl";
+// @import "./custom/rtl/structure-rtl";
+// @import "./custom/rtl/plugins-rtl";
+// @import "./custom/rtl/components-rtl";
+// @import "./custom/rtl/pages-rtl";
+
+
+body {
+  * {
+    outline: none;
+  }
+}
+
+.close {
+  background: transparent;
+  border: 0;
+  font-size: 10px;
+  padding: 1.35rem 1.25rem;
+  background: black;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.5;
+  width: 1em;
+  height: 1em;
+  z-index: 2;
+  span {
+    display: none;
+  }
+}
+
+.point-drop-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  .lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: auto;
+    width: 90vw;
+  
+    .line {
+      position: absolute;
+      width: 3px; /* Increased width for larger lines */
+      height: 100%;
+      top: 0;
+      left: 50%;
+      background: rgba(255, 255, 255, 0.3); /* Brighter line color */
+      overflow: hidden;
+      
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 15vh;
+        width: 100%;
+        top: -50%;
+        left: 0;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 75%, rgba(255, 255, 255, 0.8) 100%); /* Brighter gradient */
+        animation: drop 7s 0s infinite;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+      }
+      
+      &:nth-child(1) {
+        margin-left: -25%;
+      }
+      
+      &:nth-child(1)::after {
+        animation-delay: 2s;
+      }
+  
+      &:nth-child(3) {
+        margin-left: 25%;
+      }
+  
+      &:nth-child(3)::after {
+        animation-delay: 2.5s;
+      }
+    }
+  
+    @keyframes drop {
+      0% {
+        top: -50%;
+      }
+      100% {
+        top: 110%;
+      }
+    }
+  }
+}

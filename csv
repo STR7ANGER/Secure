@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+        @-ms-viewport {
+            width: device-width
+        }
+
+        h1, h2, h4 {
+            margin-top: 0;
+            margin-bottom: .5rem
+        }
+
+        h1, h2, h4 {
+            margin-bottom: .5rem;
+            font-family: inherit;
+            font-weight: 500;
+            line-height: 1.2;
+            color: inherit
+        }
+
+        .col-md-12, .col-md-6, .col-md-9 {
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px
+        }
+
+        h1, h2, h4 {
+            font-family: 'Open Sans',sans-serif;
+            font-weight: 700
+        }
+
+        :root {
+            --blue: #007bff;
+            --indigo: #6610f2;
+            --purple: #6f42c1;
+            --pink: #e83e8c;
+            --red: #dc3545;
+            --orange: #fd7e14;
+            --yellow: #ffc107;
+            --green: #0000FF;
+            --teal: #20c997;
+            --cyan: #17a2b8;
+            --white: #fff;
+            --gray: #6c757d;
+            --gray-dark: #343a40;
+            --primary: #007bff;
+            --secondary: #6c757d;
+            --success: #0000FF;
+            --info: #17a2b8;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --breakpoint-xs: 0;
+            --breakpoint-sm: 576px;
+            --breakpoint-md: 768px;
+            --breakpoint-lg: 992px;
+            --breakpoint-xl: 1200px;
+            --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace
+        }
+
+        *, ::after, ::before {
+            box-sizing: border-box
+        }
+
+        html {
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -ms-overflow-style: scrollbar
+        }
+
+        footer {
+            display: block
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            text-align: left;
+            background-color: #fff
+        }
+
+        h1, h2, h4, h5 {
+            margin-top: 0;
+            margin-bottom: .5rem
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem
+        }
+
+        address {
+            margin-bottom: 1rem;
+            font-style: normal;
+            line-height: inherit
+        }
+
+        ol, ul {
+            margin-top: 0;
+            margin-bottom: 1rem
+        }
+
+        strong {
+            font-weight: bolder
+        }
+
+
+        a {
+            color: #3371BC;
+            text-decoration: none;
+            background-color: transparent;
+            -webkit-text-decoration-skip: objects
+        }
+
+        img {
+            vertical-align: middle;
+            border-style: none
+        }
+
+        table {
+            border-collapse: collapse
+        }
+
+        button {
+            border-radius: 0
+        }
+
+        button, input, select, textarea {
+            margin: 0;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit
+        }
+
+        button, input {
+            overflow: visible
+        }
+
+        button, select {
+            text-transform: none
+        }
+
+        button, html [type=button] {
+            -webkit-appearance: button
+        }
+
+            [type=button]::-moz-focus-inner, button::-moz-focus-inner {
+                padding: 0;
+                border-style: none
+            }
+
+        input[type=checkbox] {
+            box-sizing: border-box;
+            padding: 0
+        }
+
+        textarea {
+            overflow: auto;
+            resize: vertical
+        }
+
+        ::-webkit-file-upload-button {
+            font: inherit;
+            -webkit-appearance: button
+        }
+
+        h1, h2, h4, h5 {
+            margin-bottom: .5rem;
+            font-family: inherit;
+            font-weight: 500;
+            line-height: 1.2;
+            color: inherit
+        }
+
+        h1 {
+            font-size: 2.5rem
+        }
+
+        h2 {
+            font-size: 2rem
+        }
+
+        h4 {
+            font-size: 1.5rem
+        }
+
+        h5 {
+            font-size: 1.25rem
+        }
+
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto
+        }
+
+        @media (min-width:576px) {
+            .container {
+                max-width: 540px
+            }
+        }
+
+        @media (min-width:768px) {
+            .container {
+                max-width: 720px
+            }
+        }
+
+        @media (min-width:992px) {
+            .container {
+                max-width: 960px
+            }
+        }
+
+        @media (min-width:1200px) {
+            .container {
+                max-width: 1140px
+            }
+        }
+
+        .row {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px
+        }
+
+        .col-md-12, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-9 {
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px
+        }
+
+        @media (min-width:768px) {
+            .col-md-3 {
+                -webkit-box-flex: 0;
+                -ms-flex: 0 0 25%;
+                flex: 0 0 25%;
+                max-width: 25%
+            }
+
+            .col-md-4 {
+                -webkit-box-flex: 0;
+                -ms-flex: 0 0 33.333333%;
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%
+            }
+
+            .col-md-5 {
+                -webkit-box-flex: 0;
+                -ms-flex: 0 0 41.666667%;
+                flex: 0 0 41.666667%;
+                max-width: 41.666667%
+            }
+
+            .col-md-6 {
+                -webkit-box-flex: 0;
+                -ms-flex: 0 0 50%;
+                flex: 0 0 50%;
+                max-width: 50%
+            }
+
+            .col-md-9 {
+                -webkit-box-flex: 0;
+                -ms-flex: 0 0 75%;
+                flex: 0 0 75%;
+                max-width: 75%
+            }
+
+            .col-md-12 {
+                -webkit-box-flex: 0;
+                -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+                max-width: 100%
+            }
+
+            .offset-md-2 {
+                margin-left: 16.666667%
+            }
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem
+        }
+
+            .form-control::-ms-expand {
+                background-color: transparent;
+                border: 0
+            }
+
+            .form-control::-webkit-input-placeholder {
+                color: #6c757d;
+                opacity: 1
+            }
+
+            .form-control::-moz-placeholder {
+                color: #6c757d;
+                opacity: 1
+            }
+
+            .form-control:-ms-input-placeholder {
+                color: #6c757d;
+                opacity: 1
+            }
+
+            .form-control::-ms-input-placeholder {
+                color: #6c757d;
+                opacity: 1
+            }
+
+        .btn {
+            display: inline-block;
+            font-weight: 400;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            border: 1px solid transparent;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: .25rem
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff
+        }
+
+        .btn-secondary {
+            color: #fff;
+            background-color: #6c757d;
+            border-color: #6c757d
+        }
+
+        .btn-info {
+            color: #fff;
+            background-color: #17a2b8;
+            border-color: #17a2b8
+        }
+
+        .btn-light {
+            color: #212529;
+            background-color: #f8f9fa;
+            border-color: #f8f9fa
+        }
+
+        .btn-outline-secondary {
+            color: #6c757d;
+            background-color: transparent;
+            background-image: none;
+            border-color: #6c757d
+        }
+
+        .btn-outline-info {
+            color: #17a2b8;
+            background-color: transparent;
+            background-image: none;
+            border-color: #17a2b8
+        }
+
+        .btn-outline-light {
+            color: #f8f9fa;
+            background-color: transparent;
+            background-image: none;
+            border-color: #f8f9fa
+        }
+
+        .btn-lg {
+            padding: .5rem 1rem;
+            font-size: 1.25rem;
+            line-height: 1.5;
+            border-radius: .3rem
+        }
+
+        .btn-sm {
+            padding: .25rem .5rem;
+            font-size: .875rem;
+            line-height: 1.5;
+            border-radius: .2rem
+        }
+
+        .fade {
+            opacity: 0
+        }
+
+        .card {
+            position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(0,0,0,.125);
+            border-radius: .25rem
+        }
+
+        .card-body {
+            -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            padding: 1.25rem
+        }
+
+        .alert {
+            position: relative;
+            padding: .75rem 1.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid transparent;
+            border-radius: .25rem
+        }
+
+        .alert-warning {
+            color: #856404;
+            background-color: #fff3cd;
+            border-color: #ffeeba
+        }
+
+        .alert-danger {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb
+        }
+
+        .progress {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            height: 1rem;
+            overflow: hidden;
+            font-size: .75rem;
+            background-color: #e9ecef;
+            border-radius: .25rem
+        }
+
+        .progress-bar {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            background-color: #3371BC;
+        }
+
+        .close {
+            float: right;
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1;
+            color: #000;
+            text-shadow: 0 1px 0 #fff;
+            opacity: .5
+        }
+
+        button.close {
+            padding: 0;
+            background-color: transparent;
+            border: 0;
+            -webkit-appearance: none
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1050;
+            display: none;
+            overflow: hidden;
+            outline: 0
+        }
+
+        .modal-dialog {
+            position: relative;
+            width: auto;
+            margin: .5rem
+        }
+
+        .modal.fade .modal-dialog {
+            -webkit-transform: translate(0,-25%);
+            transform: translate(0,-25%)
+        }
+
+        .modal-content {
+            position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            width: 100%;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid rgba(0,0,0,.2);
+            border-radius: .3rem;
+            outline: 0
+        }
+
+        .modal-header {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            padding: 1rem;
+            border-bottom: 1px solid #e9ecef;
+            border-top-left-radius: .3rem;
+            border-top-right-radius: .3rem
+        }
+
+            .modal-header .close {
+                padding: 1rem;
+                margin: -1rem -1rem -1rem auto
+            }
+
+        .modal-title {
+            margin-bottom: 0;
+            line-height: 1.5
+        }
+
+        .modal-body {
+            position: relative;
+            -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            padding: 1rem
+        }
+
+        .modal-footer {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+            padding: 1rem;
+            border-top: 1px solid #e9ecef
+        }
+
+            .modal-footer > :not(:first-child) {
+                margin-left: .25rem
+            }
+
+            .modal-footer > :not(:last-child) {
+                margin-right: .25rem
+            }
+
+        @media (min-width:576px) {
+            .modal-dialog {
+                max-width: 500px;
+                margin: 1.75rem auto
+            }
+        }
+
+        .bg-info {
+            background-color: #17a2b8 !important
+        }
+
+        .clearfix::after {
+            display: block;
+            clear: both;
+            content: ""
+        }
+
+        .d-inline-block {
+            display: inline-block !important
+        }
+
+        @media (min-width:768px) {
+            .d-md-inline-flex {
+                display: -webkit-inline-box !important;
+                display: -ms-inline-flexbox !important;
+                display: inline-flex !important
+            }
+        }
+
+        .justify-content-center {
+            -webkit-box-pack: center !important;
+            -ms-flex-pack: center !important;
+            justify-content: center !important
+        }
+
+        .align-items-center {
+            -webkit-box-align: center !important;
+            -ms-flex-align: center !important;
+            align-items: center !important
+        }
+
+        .float-left {
+            float: left !important
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+            -webkit-clip-path: inset(50%);
+            clip-path: inset(50%);
+            border: 0
+        }
+
+        .mt-1 {
+            margin-top: .25rem !important
+        }
+
+        .mt-2 {
+            margin-top: .5rem !important
+        }
+
+        .mx-2 {
+            margin-right: .5rem !important
+        }
+
+        .ml-2, .mx-2 {
+            margin-left: .5rem !important
+        }
+
+        .mt-3 {
+            margin-top: 1rem !important
+        }
+
+        .mb-3 {
+            margin-bottom: 1rem !important
+        }
+
+        .mt-4 {
+            margin-top: 1.5rem !important
+        }
+
+        .ml-4 {
+            margin-left: 1.5rem !important
+        }
+
+        .ml-5 {
+            margin-left: 3rem !important
+        }
+
+        .mx-auto {
+            margin-right: auto !important
+        }
+
+        .mx-auto {
+            margin-left: auto !important
+        }
+
+        .text-left {
+            text-align: left !important
+        }
+
+        .text-right {
+            text-align: right !important
+        }
+
+        .text-center {
+            text-align: center !important
+        }
+
+        @media (min-width:576px) {
+            .text-sm-center {
+                text-align: center !important
+            }
+        }
+
+        .text-white {
+            color: #fff !important
+        }
+
+        body {
+            padding-bottom: 20px
+        }
+
+            body a {
+                color: #3371BC;
+            }
+
+        ol {
+            margin-bottom: 0
+        }
+
+        .body-content {
+            padding-left: 0;
+            padding-right: 0
+        }
+
+        h1, h2, h4, h5 {
+            font-family: 'Open Sans',sans-serif;
+            font-weight: 700
+        }
+
+        div, p {
+            font-family: 'Open Sans',sans-serif
+        }
+
+        .container-narrow {
+            padding-left: 30px;
+            padding-right: 30px;
+            margin: 0 auto
+        }
+
+        .container-content {
+            margin-bottom: 10px;
+            padding-top: 10px;
+            padding-bottom: 30px;
+            background-color: rgba(255,255,255,.98);
+            border-left: 1px solid #ececec;
+            border-right: 1px solid #ececec;
+            border-bottom: 1px solid #ececec;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px
+        }
+
+        .footer-credits {
+            width: 100vw;
+            padding-top: 0px;
+            font-size: 70%;
+            clear: both;
+            text-align: center;
+            text-transform: uppercase;
+            color: #000
+        }
+
+        #txtJSON {
+            margin-top: 20px;
+            height: 100px;
+            margin-bottom: 0;
+            border-color: #000;
+            width: 100%
+        }
+
+        #footer {
+            width: 100vw;
+        }
+
+            #footer ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0
+            }
+
+        .footer-container {
+            border: solid 3px rgb(236, 236, 236);
+            padding-left: 20px;
+            padding-left: 20px;
+            border-radius: 20px;
+            background-color: white;
+        }
+
+        * {
+            margin: 0
+        }
+
+        body, html {
+            height: 100%
+        }
+
+        .wrapper {
+            width: 100vw;
+            min-height: 100%;
+            height: auto !important;
+            margin: 0 auto -201px
+        }
+
+        .footer, .push {
+            height: 201px
+        }
+
+        .btn-file {
+            position: relative;
+            overflow: hidden
+        }
+
+            .btn-file input[type=file] {
+                position: absolute;
+                top: 0;
+                right: 0;
+                min-width: 100%;
+                min-height: 100%;
+                font-size: 100px;
+                text-align: right;
+                opacity: 0;
+                outline: 0;
+                background: #fff;
+                display: block
+            }
+
+        #main-results-wrapper {
+            margin-top: 100px
+        }
+
+        #results-screen {
+            margin-left: 0 auto !important;
+            margin-right: 0 auto !important;
+            min-height: 1200px;
+            min-width: 800px;
+            margin-bottom: 30px;
+            display: table
+        }
+
+        #results-toolbar {
+            margin-top: -20px;
+            max-width: 100vw
+        }
+
+        @media only screen and (min-width:768px) {
+            #results-toolbar {
+                height: 130px
+            }
+        }
+
+        #results-screen table {
+            margin-top: 20px;
+            float: none !important
+        }
+
+        #results-screen tbody tr:nth-child(odd) {
+            background-color: rgba(245,245,245,.5)
+        }
+
+        #results-screen tbody tr:nth-child(even) {
+            background-color: rgba(255,255,255,.5)
+        }
+
+        #results-screen td {
+            padding-left: 5px;
+            padding-right: 5px;
+            white-space: nowrap
+        }
+
+        .progress {
+            margin-top: 20px;
+            height: 100px;
+            opacity: .5;
+            background-color: #1e7e34
+        }
+
+        #errorHTML {
+            color: red;
+            margin-top: 20px
+        }
+
+        #progress-preview {
+            padding-top: 200px
+        }
+
+        .progress-bar {
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(90,177,214,1) 40%, rgba(15,133,184,1) 74%);
+            height: 100px;
+        }
+
+        #settings-cog {
+            position: absolute;
+            right: -50px;
+            top: 28%;
+            width: 70px;
+            height: 56px
+        }
+
+        #pro-label {
+            color: #7f7f7f
+        }
+
+        #sharePrompt {
+            margin-top: 50px
+        }
+
+        textarea {
+            color: #666;
+            font-size: 14px;
+            -moz-border-radius: 8px;
+            -webkit-border-radius: 8px;
+            margin: 5px 0 10px;
+            padding: 10px;
+            height: 75px;
+            width: 350px;
+            border: 1px solid #999;
+            font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
+            box-shadow: 0 0 5px rgba(81,203,238,0);
+            -webkit-box-shadow: 0 0 5px rgba(81,203,238,0);
+            -moz-box-shadow: 0 0 5px rgba(81,203,238,0)
+        }
+
+        .fb-like {
+            margin-top: -5px
+        }
+
+        @media screen and (min-width:800px) {
+            #txtJSON::-webkit-input-placeholder {
+                text-align: center;
+                padding-top: 30px
+            }
+
+            #txtJSON:-moz-placeholder {
+                text-align: center;
+                padding-top: 30px
+            }
+
+            #txtJSON::-moz-placeholder {
+                text-align: center;
+                padding-top: 30px
+            }
+
+            #txtJSON:-ms-input-placeholder {
+                text-align: center;
+                padding-top: 30px
+            }
+        }
+
+        #upload-section {
+            margin-top: 20px
+        }
+
+        #upload-text {
+            color: #7f7f7f
+        }
+
+        #different {
+            margin-top: 8px;
+            display: inline
+        }
+
+        #differentText {
+            height: 200px;
+            width: 100%
+        }
+
+        #differentSend {
+            margin-top: 10px;
+            margin-bottom: 20px
+        }
+
+        #specialoffer {
+            border: 2px solid green;
+            border-radius: 50px;
+            padding: 20px;
+            margin: 20px
+        }
+
+            #specialoffer .form-control {
+                margin-top: 30px
+            }
+
+        #specialoffer-form {
+            width: 70%
+        }
+
+        #download-link {
+            display: inline-block;
+            height: 100px;
+            padding: 35px
+        }
+
+        #downloaded-info {
+            display: none;
+            margin-top: 20px
+        }
+
+        #intro-text {
+            border-color: rgb(236, 236, 236);
+            margin-top: 30px;
+            margin-bottom: 30px
+        }
+
+            #intro-text h2 {
+                font-size: 16px
+            }
+
+        #main-heading {
+            margin-top: 10px
+        }
+
+        #upload-button {
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+            height: 100px;
+            padding-top: 27px;
+            background-color: #000;
+            border: solid 7px #3371BC;
+            color: white;
+            transition: background-color 0.3s ease; 
+        }
+
+        @media screen and (min-width:1000px) {
+            #main-page-container {
+                width: 50%
+            }
+        }
+
+        #how-to h2 {
+            margin-left: 3px;
+            font-size: 16px;
+            display: inline-block
+        }
+
+        #filename-edit-container {
+            opacity: .5
+        }
+
+        #filename-extension {
+            margin-left: 0
+        }
+
+        #download-container {
+            width: 300px
+        }
+
+        @media screen and (max-width:32em) {
+            body {
+                font-size: 75%
+            }
+        }
+
+        @media (min-width:768px) and (max-width:992px) {
+            .container {
+                width: initial;
+                padding-left: 2em;
+                padding-right: 2em
+            }
+        }</style>
+<style>.footer-credits li { margin-top: 5px;display: inline;padding: 0 12px 0 8px;}</style>
+<style>.svg-icon {display: inline-block;width: 1em;height: 1em;fill: currentColor}</style>
+<link rel="icon" sizes="any" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="msvalidate.01" content="41368810C13A7B992CEEA1CD1FF3F016" />
+<link rel="canonical" href="https://data.page/json/csv" />
+<meta name="description" content="Convert JSON to CSV.  Paste or upload JSON. View CSV result in Excel (or Open Office) instantly. Powerful free online tool.  Professional results.  Convert now." />
+<meta name="keywords" content />
+<title>JSON to CSV Converter</title>
+
+<link rel="stylesheet" href="/bundle.css" media="print" onload="this.media='all'">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin media="print" onload="this.media='all'" />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" media="print" onload="this.media='all'" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" media="print" onload="this.media='all'" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" media="print" onload="this.media ='all' ">
+</head>
+<body>
+<svg b-ot8wsujqi9 style="display: none">
+<defs b-ot8wsujqi9>
+<symbol b-ot8wsujqi9 id="icon-upload" viewBox="0 0 26 28">
+<path b-ot8wsujqi9 d="M20 23c0-0.547-0.453-1-1-1s-1 0.453-1 1 0.453 1 1 1 1-0.453 1-1zM24 23c0-0.547-0.453-1-1-1s-1 0.453-1 1 0.453 1 1 1 1-0.453 1-1zM26 19.5v5c0 0.828-0.672 1.5-1.5 1.5h-23c-0.828 0-1.5-0.672-1.5-1.5v-5c0-0.828 0.672-1.5 1.5-1.5h6.672c0.422 1.156 1.531 2 2.828 2h4c1.297 0 2.406-0.844 2.828-2h6.672c0.828 0 1.5 0.672 1.5 1.5zM20.922 9.375c-0.156 0.375-0.516 0.625-0.922 0.625h-4v7c0 0.547-0.453 1-1 1h-4c-0.547 0-1-0.453-1-1v-7h-4c-0.406 0-0.766-0.25-0.922-0.625-0.156-0.359-0.078-0.797 0.219-1.078l7-7c0.187-0.203 0.453-0.297 0.703-0.297s0.516 0.094 0.703 0.297l7 7c0.297 0.281 0.375 0.719 0.219 1.078z"></path>
+</symbol>
+<symbol b-ot8wsujqi9 id="icon-cog" viewBox="0 0 24 28">
+<path b-ot8wsujqi9 d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zM24 12.297v3.469c0 0.234-0.187 0.516-0.438 0.562l-2.891 0.438c-0.172 0.5-0.359 0.969-0.609 1.422 0.531 0.766 1.094 1.453 1.672 2.156 0.094 0.109 0.156 0.25 0.156 0.391s-0.047 0.25-0.141 0.359c-0.375 0.5-2.484 2.797-3.016 2.797-0.141 0-0.281-0.063-0.406-0.141l-2.156-1.687c-0.453 0.234-0.938 0.438-1.422 0.594-0.109 0.953-0.203 1.969-0.453 2.906-0.063 0.25-0.281 0.438-0.562 0.438h-3.469c-0.281 0-0.531-0.203-0.562-0.469l-0.438-2.875c-0.484-0.156-0.953-0.344-1.406-0.578l-2.203 1.672c-0.109 0.094-0.25 0.141-0.391 0.141s-0.281-0.063-0.391-0.172c-0.828-0.75-1.922-1.719-2.578-2.625-0.078-0.109-0.109-0.234-0.109-0.359 0-0.141 0.047-0.25 0.125-0.359 0.531-0.719 1.109-1.406 1.641-2.141-0.266-0.5-0.484-1.016-0.641-1.547l-2.859-0.422c-0.266-0.047-0.453-0.297-0.453-0.562v-3.469c0-0.234 0.187-0.516 0.422-0.562l2.906-0.438c0.156-0.5 0.359-0.969 0.609-1.437-0.531-0.75-1.094-1.453-1.672-2.156-0.094-0.109-0.156-0.234-0.156-0.375s0.063-0.25 0.141-0.359c0.375-0.516 2.484-2.797 3.016-2.797 0.141 0 0.281 0.063 0.406 0.156l2.156 1.672c0.453-0.234 0.938-0.438 1.422-0.594 0.109-0.953 0.203-1.969 0.453-2.906 0.063-0.25 0.281-0.438 0.562-0.438h3.469c0.281 0 0.531 0.203 0.562 0.469l0.438 2.875c0.484 0.156 0.953 0.344 1.406 0.578l2.219-1.672c0.094-0.094 0.234-0.141 0.375-0.141s0.281 0.063 0.391 0.156c0.828 0.766 1.922 1.734 2.578 2.656 0.078 0.094 0.109 0.219 0.109 0.344 0 0.141-0.047 0.25-0.125 0.359-0.531 0.719-1.109 1.406-1.641 2.141 0.266 0.5 0.484 1.016 0.641 1.531l2.859 0.438c0.266 0.047 0.453 0.297 0.453 0.562z"></path>
+</symbol>
+</defs>
+</svg>
+<div b-ot8wsujqi9 class="wrapper">
+<div b-ot8wsujqi9 class="clearfix"></div>
+<div id="main-page-container" class="container body-content">
+<div class="container-narrow container-content">
+<div id="home">
+<div class="row">
+<div class="col-md-12">
+<h1 class="text-center" id="main-heading">Convert JSON to CSV</h1>
+</div>
+
+</div>
+<div class="row">
+<div class="col-md-12">
+<button id="settings-cog" type="button" class="btn btn-sm" data-toggle="modal" data-target="#myModal" aria-label="Open Settings">
+<svg class="svg-icon pull-right"><use xlink:href="#icon-cog"></use></svg>
+</button>
+<div class="row">
+<div class="col-md-6">
+<div id="upload-section" class="text-center">
+<div class="btn-lg btn-file text-center" id="upload-button">
+<svg class="svg-icon"><use xlink:href="#icon-upload"></use></svg> Upload JSON file <input id="fileupload" aria-label="File Upload" type="file" name="files[]" data-url="/conversion/start">
+</div>
+<div>
+<span id="upload-text">
+&nbsp;.json / .zip
+<span id="file-allowance"><a href="/upgrade" target="_blank">Up to 1 MB</a></span>
+</span>
+</div>
+</div>
+</div>
+<div class="col-md-6 text-center">
+<textarea class="form-control" id="txtJSON" placeholder="or Paste your JSON text (or url) here"></textarea>
+</div>
+</div>
+</div>
+</div>
+<div id="pro-user-display" class="container" style="display:none">
+<div class="row">
+<div class="col-md-12">
+<div id="pro-label" class="col-md-12 text-center mt-4">
+<h4>
+<span class="fa fa-music"></span> <span>PRO User</span> <span class="fa fa-music"></span>
+</h4>
+</div>
+</div>
+</div>
+</div>
+<div id="progress-main" style="display:none;" class="progress progress-striped active">
+<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+<div style="color: white" id="status"></div>
+</div>
+</div>
+<div id="errorHTML"></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-9 offset-md-2 card card-body" id="intro-text">
+<div id="how-to">
+<h2>Convert JSON to CSV using this free online tool</h2>
+<ol>
+<li><strong>Upload your JSON file</strong> by clicking the blue button (or paste your JSON text / URL into the textbox)</li>
+<li>(Press the cog button on the right for advanced settings)</li>
+<li><strong>Download the resulting CSV file</strong> when prompted</li>
+<li><strong>Open your CSV file</strong> in Excel (or Open Office)</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<strong class="modal-title" id="myModalLabel">Settings</strong>
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+</div>
+<div class="modal-body">
+<div id="settings-box" style>
+<div>
+<div>delimiter</div>
+<select id="drpDelimiter">
+<option>comma</option>
+<option>tab</option>
+<option>semicolon</option>
+<option>pipe</option>
+</select>
+<br>
+<div>nested data</div>
+<select id="drpNested">
+<option>header / detail report style</option>
+<option>all on same row (inside separate columns)</option>
+<option>concatenate (inside shared columns)</option>
+<option>matrix style</option>
+</select>
+<br>
+<div>column order</div>
+<select id="drpColumnOrder">
+<option>original order</option>
+<option>smart ordering</option>
+</select>
+<br>
+<div>dates</div>
+<div><input id="chkEpoch" type="checkbox">Epoch -&gt; yyyymmdd</div>
+</div>
+<div> </div>
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="dataModal" tabindex="-1" role="dialog" aria-labelledby="modal-data-limit" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="myModalLabel">Data Limit</h4>
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+</div>
+<div class="modal-body">
+<div id="limit-box" style>
+<div>
+<p>Convert up to 1 MB for free every 24 hours.</p>
+<a href="/upgrade">Subscribe to PRO</a> for just $10 / month and convert up to 50 MB (and unlock some useful features).
+</div>
+<div> </div>
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+<input type="hidden" id="hiddenIsLoggedIn" value="false" />
+<script type="text/javascript">
+        var isCSVToJSON = false;
+    </script>
+<input type="hidden" id="statusId" value="905e7fd4-060f-45dc-9a43-ec2d5bbf3886" />
+<div id="main-results-wrapper" style="display:none">
+<div id="results-screen">
+<form action="https://www.paypal.com/cgi-bin/webscr" target="_blank" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="7MDPA7DFH3QBN">
+<input type="hidden" class="paypal-item-number" name="item_number" value>
+<input type="hidden" name="item_name" id="paypal_item_name" value="Data.Page Cloud PRO subscription    _999_1">
+<input type="hidden" name="notify_url" value="https://data.page/ipn">
+<table class="mx-auto mb-3" style="display: none">
+<tr><td><input type="hidden" name="on0" value></td></tr>
+<tr>
+<td>
+<select name="os0">
+<option value="1 user">$10 per month: 1 user</option>
+<option value="1 user yearly">$80 per year: 1 user</option>
+<option value="2 users">$20 per month: 2 users</option>
+<option value="2 users yearly">$160 per year: 2 users</option>
+<option value="3 users">$30 per month: 3 users</option>
+<option value="3 users yearly">$240 per year: 3 users</option>
+<option value="4 users">$40 per month: 4 users</option>
+<option value="4 users yearly">$320 per year: 4 users</option>
+<option value="5 users">$50 per month: 5 users</option>
+<option value="5 users yearly">$400 per year: 5 users</option>
+</select>
+</td>
+</tr>
+</table>
+<img alt src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+<div id="oversize-container"></div>
+</form>
+<form method="post" id="frmResults" action="/conversion/getjson">
+<div class="row">
+<div id="results-toolbar" class="col-md-12 d-md-inline-flex align-items-center justify-content-center">
+<div id="download-container" class="d-inline-block">
+<a class="btn-lg btn-primary" id="download-link" href>
+<span class="fa fa-download"></span> DOWNLOAD CSV
+</a>
+<div id="filename-edit-container" class="text-center">
+<span class="text-right" id="filename-edit" pattern="[^\r\n,;/><()\][\\\x22|]+" type="text" role="textbox" contenteditable></span><span id="filename-extension"></span>
+</div>
+</div>
+<div id="downloaded-info" class="mb-3">
+<p>Downloaded <a id="filename-info" href download></a></p>
+<p>Thanks for using <img class="convert-another" src="/images/logo.png" alt="convert another" /> </p>
+<div id="social-non-pro">
+<div>
+<a class="btn btn-sm" id="tweet" href="https://twitter.com/intent/tweet/?text=A+cool+JSON+to+CSV+converter&amp;url=https://data.page/json/csv" target="_blank" rel="noopener" aria-label="Share on Twitter">Tweet</a> us to the world!
+</div>
+<div style class="fb-like" data-href="https://data.page" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+</div>
+</div>
+<a class="btn btn-outline-secondary btn-lg ml-4" id="download-link-xlsx" href><span class="fa fa-download"></span> or Excel File (XLSX)</a>
+<button id="clipboard" class="btn btn-outline-secondary btn-lg mx-2" type="button"><i class="fas fa-copy"></i> Copy to Clipboard</button>
+<button class="ml-5 btn btn-outline-secondary btn-sm" id="other" type="button"><span class="fa fa-magic"></span> or do something clever<br/>with this result...</button>
+<div id="other-container" class="mt-2" style="display:none">
+<button class="btn btn-outline-secondary btn-sm" id="download-link-google" type="button" email><span class="fa fa-table"></span> Google<br/>Spreadsheet</button>
+<a class="btn btn-outline-secondary  btn-sm" id="permalink" href onclick="return confirm('If you continue, this conversion will be stored permanently.  You will be able to send the link to others.  Create a permalink now?')"><span class="fa fa-cloud"></span> public<br/>permalink</a>
+<button info="Send the CSV result to your own server via FTP (manually or automatically)." class="btn btn-outline-secondary btn-sm contact" type="button"><i class="fas fa-file-import"></i> FTP</button>
+<a id="sqlite-database" href class="btn btn-outline-secondary btn-sm"><i class="fas fa-database"></i> SQLite database</a>
+<a id="sql-server-dump" href class="btn btn-outline-secondary btn-sm"><i class="fas fa-database"></i> SQL Server table dump</a>
+<a id="mysql-dump" href class="btn btn-outline-secondary btn-sm"><i class="fas fa-database"></i> MySQL table dump</a>
+<button info="Send this data to a MySQL or SQL Server database.  We can send you a database dump, host a public database table in the cloud or transfer the data directly to your local database." class="btn btn-outline-secondary btn-sm contact" type="button"><i class="fas fa-database"></i> MySQL or <br/>SQL Server table transfer</button>
+<a class="btn btn-outline-secondary btn-sm" href="/editor"><i class="fas fa-edit"></i> Edit</a>
+<button info="Generate a HTML chart from JSON values.  Create permalink for public / private sharing or download for offline use." class="btn btn-outline-secondary btn-sm contact" type="button"><i class="fas fa-chart-bar"></i>HTML chart</button>
+<button info="Use very simple (yet extremely flexible) templates to generate powerful reports from one or more JSON sources." class="btn btn-outline-secondary btn-sm contact" type="button"><i class="fas fa-file-invoice"></i> custom<br/>report</button>
+<button info="Powerful filtering / sorting  by columns / rows in any way you wish.  Transform your data before it becomes a CSV file" class="btn btn-outline-secondary btn-sm sort contact" type="button"><i class="fas fa-filter"></i> filter / sort <i class="fas fa-sort"></i></button>
+<div id="different" class><a class="btn btn-outline-secondary btn-sm mt-1" data-toggle="modal" data-target="#modalDifferent" href="#"><span class="fa fa-magic"></span> something<br/>else...</a></div>
+</div>
+<div class="btn btn-outline-secondary btn-sm convert-another ml-2"><span class="fa fa-arrow-up"></span> reset</div>
+<div id="multiple-worksheets" class="mt-4 card text-white bg-info mb-3" style="display: none;">
+<div class="card-body">
+<p class="card-text">Downloaded. Thanks for using the service.</p>
+<p>We are eager to keep enhancing this tool! Please <a target="_blank" class="btn btn-outline-light" href="/contact">contact us</a> if you require any further customization to your file.</p>
+</div>
+</div>
+</div>
+<div class="text-center mx-auto">
+<div id="progress-preview" style="display:none;">
+<div class="progress progress-striped active">
+<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+</div>
+</div>
+</div>
+<div id="resultHTML"></div>
+<div id="sharePrompt" style="display:none">
+<p>Your CSV file should now be downloading automatically.</p>
+<div id="specialoffer" class="text-left">
+<p>If you require assistance with anything else involving data, send us a quick message now.</p>
+<p>Data extraction from the web, merging, monitoring, synchronization, integration, transformation, grouping, notifications etc.</p>
+<p>JSON, XML, HTML tables, CSV, SQL Server, MySQL, MS Access, we can help you with all of this and more.</p>
+<p>Just fill out the following:</p>
+<div id="specialoffer-form" style="margin-left: auto;margin-right: auto;">
+<input id="offer-email" type="text" class="form-control input-lg" placeholder="your email address" />
+<textarea id="offer-presented" class="form-control input-lg" placeholder="Describe your requirements"></textarea>
+<div style="display:none;" id="antispam-container"><span>What is 3 + 5? </span> <input id="antispam" type="text" class="input-sm" placeholder="type 8 here" /> <span>(just verifying that you are human)</span></div>
+<input type="button" class="form-control btn-primary" id="offer-submit" value="Submit" />
+</div>
+</div>
+<br/><br/><br/>
+<div><a id="showDataTable" href="#">show data table again</a></div>
+</div>
+</div>
+</div>
+</form>
+</div>
+
+<div class="modal fade" id="modalDifferent" tabindex="-1" role="dialog" aria-labelledby="modal-customize" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="modal-customize">Do something clever with this data</h4>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<p>We are eager to produce amazing data solutions for you. If you have any ideas at all, let's discuss them. A taste of what we can do for you:</p>
+<ul>
+<li>transform <strong>JSON / XML / scraped HTML</strong> into a <strong>report / HTML dashboard / chart / Google Spreadsheet</strong> (using powerful underlying SQL queries and easily modified templates)</li>
+<li>schedule data to be <strong>read from / written to</strong> a <strong>URL / Dropbox / Box / MySQL / SQL Server / Zapier</strong> periodically</li>
+<li>merge data from multiple sources together</li>
+<li>integrate multiple actions inside a powerful workflow</li>
+<li>what is your idea?</li>
+</ul>
+<textarea id="differentText" class="form-control" placeholder="With this data, I would like to create..."></textarea>
+<input id="differentEmail" class="form-control input-lg" type="text" placeholder="my email address" />
+<div><input id="differentSend" type="button" class="btn-primary form-control" value="Send" /></div>
+<div>
+<p>Challenge accepted!<p>
+<p>Just send through your requirements and we will assist you with a solution.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="modal-google-spreadsheet">
+<div class="modal-dialog">
+<div class="modal-content">
+
+<div class="modal-header">
+<h4 class="modal-title">Send to Google Spreadsheet</h4>
+<button type="button" class="close" data-dismiss="modal">×</button>
+</div>
+
+<div class="modal-body">
+<p class="alert alert-danger">
+Careful. This will send data outside of data.page
+</p>
+<p class="alert alert-danger">IMPORTANT: After generating the sheet, go to FILE, MAKE A COPY to permanently save to your Google Drive. Otherwise the sheet will be deleted from your drive within 1 hour.</p>
+<p><a href="/contact" target="_blank">Contact us</a> if you are looking for a more automated solution.</p>
+<p>
+Send my data to a new Sheet in the Google Drive Account of:
+<strong id="google-spreadsheet-email">email</strong>
+<button id="change-google-spreadsheet-email" type="button" class="btn btn-sm btn-default">change...</button>
+<input class="text-sm-center" style="display: none" id="google-spreadsheet-email-edit" value />
+<button id="save-google-spreadsheet-email" type="button" style="display: none" class="btn btn-sm btn-primary">save</button>
+</p>
+<p class="alert alert-warning">Email address above must be a valid Google Account</p>
+<a href="/contact?message=Auto-update+my+google+spreadsheet">Contact us</a> if you would like the Sheet to be auto-updated daily / weekly.
+</div>
+
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+<a id="google-spreadsheet-continue" class="btn btn-primary" target="_blank" href>Send to Google Drive now</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="filterModalLabel">Filter Table</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<form id="filterForm">
+<div class="form-group row">
+<div class="col-sm-9">
+<select class="form-control" id="filterColumn">
+
+</select>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-sm-9">
+<select class="form-control" id="filterType">
+<option value="contains">Contains</option>
+<option value="startsWith">Starts With</option>
+<option value="endsWith">Ends With</option>
+<option value="equals">Equals</option>
+<option value="greaterThan">Greater Than</option>
+<option value="lessThan">Less Than</option>
+</select>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-sm-9">
+<input type="text" class="form-control" id="filterValue" placeholder="Enter filter value">
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<input type="hidden" id="defaultText" value />}
+<div b-ot8wsujqi9 class="push"></div>
+</div>
+<footer b-ot8wsujqi9 class="footer clearfix" id="footer">
+<span b-ot8wsujqi9 class="stripe footer-top"></span>
+<div b-ot8wsujqi9 class="container footer-container">
+
+<div b-ot8wsujqi9 class="row">
+<div b-ot8wsujqi9 class="col-md-3 mt-3">
+<h3 b-ot8wsujqi9 class="title"><span b-ot8wsujqi9>Contact us</span></h3>
+<address b-ot8wsujqi9>
+<div b-ot8wsujqi9><a b-ot8wsujqi9 href="/contact">Tell us about your data-related problem.</a> We will solve it rapidly.</div>
+</address>
+<div b-ot8wsujqi9>
+<a b-ot8wsujqi9 href="/" class="float-left"><img src="/images/logo.png" alt="logo" width="100" height="50" /></a>
+<div b-ot8wsujqi9 id="login-snippet" class></div>
+</div>
+</div>
+<div b-ot8wsujqi9 class="col-md-4 hidden-print mt-3">
+<div b-ot8wsujqi9 style="margin-top: 15px;">
+<div b-ot8wsujqi9 style="float: left;">
+<a b-ot8wsujqi9 class="btn btn-sm" id="tweet" href="https://twitter.com/intent/tweet/?text=A&#x2B;cool&#x2B;JSON&#x2B;to&#x2B;CSV&#x2B;converter&amp;url=https://data.page/json/csv" target="_blank" rel="noopener" aria-label="Share on Twitter">Tweet</a>
+</div>
+<div b-ot8wsujqi9 style="float: left;margin-left: 4px;">
+
+<div b-ot8wsujqi9 class="g-plusone" data-annotation="none"></div>
+</div>
+<div b-ot8wsujqi9 style="float: left; margin-left: 4px; margin-top: 1px;" class="fb-like" data-href="https://data.page" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+<div b-ot8wsujqi9 style="clear: both;"></div>
+</div>
+<p b-ot8wsujqi9 style="margin-top:5px;"><a b-ot8wsujqi9 href="/csvshortcuts">CSV Shortcuts</a> - transform any JSON URL into a direct CSV download link (and email to others) </p>
+<p b-ot8wsujqi9><a b-ot8wsujqi9 href="/alerts">Email alerts</a> - receive daily emails (with CSV attached) whenever a JSON feed changes</p>
+
+</div>
+
+<div b-ot8wsujqi9 class="col-md-5 hidden-print mt-3">
+<h3 b-ot8wsujqi9 class="title"><span b-ot8wsujqi9>Where now?</span></h3>
+<div b-ot8wsujqi9 class="row">
+<div b-ot8wsujqi9 class="col-md-4">
+<ul b-ot8wsujqi9>
+<li b-ot8wsujqi9><a b-ot8wsujqi9 href="/json/csv">JSON to CSV</a></li>
+<li b-ot8wsujqi9><a b-ot8wsujqi9 href="/csv/json">CSV to JSON</a></li>
+<li b-ot8wsujqi9><a b-ot8wsujqi9 href="/xml/csv">XML to CSV</a></li>
+<li b-ot8wsujqi9><a b-ot8wsujqi9 href="/download">Desktop App</a></li>
+<li b-ot8wsujqi9><a b-ot8wsujqi9 href="/json/formatter">JSON Formatter</a></li>
+</ul>
+</div>
+<div b-ot8wsujqi9 class="col-md-4">
+<ul b-ot8wsujqi9>
+<li b-ot8wsujqi9><a b-ot8wsujqi9 href="/upgrade">Upgrade to PRO</a></li>
+<li b-ot8wsujqi9><a b-ot8wsujqi9 href="/login">Log in</a></li>
+<li b-ot8wsujqi9><a b-ot8wsujqi9 href="/api">API</a></li>
+<li b-ot8wsujqi9><a b-ot8wsujqi9 href="/editor">JSON Editor</a></li>
+</ul>
+</div>
+<div b-ot8wsujqi9 class="col-md-4">
+<ul b-ot8wsujqi9>
+<li b-ot8wsujqi9><a b-ot8wsujqi9 href="/json">What is JSON?</a></li>
+
+<li b-ot8wsujqi9> <a b-ot8wsujqi9 href="/csv">What is CSV?</a></li>
+<li b-ot8wsujqi9><a b-ot8wsujqi9 href="/blog">Blog</a></li>
+<li b-ot8wsujqi9><a b-ot8wsujqi9 href="/about">About Us</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div b-ot8wsujqi9 class="footer-credits hidden-print" id="credits">
+<ul b-ot8wsujqi9 class="clearfix">
+<li b-ot8wsujqi9>&copy; 2012-2024 - Data.Page</li>
+<li b-ot8wsujqi9><a b-ot8wsujqi9 href="/terms">Terms</a></li>
+<li b-ot8wsujqi9><a b-ot8wsujqi9 href="/terms#privacy">Privacy Policy</a></li>
+</ul>
+
+</div>
+</footer>
+
+<script defer type="text/javascript" src="/bundle.js"></script>
+<script defer type="text/javascript" src="/js/jquery.signalR-2.4.2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+<input b-ot8wsujqi9 type="hidden" id="email" value />
+
+<script defer type="text/javascript">
+        var sc_project = 12551630;
+        var sc_invisible = 1;
+        var sc_security = "53ae76e2";
+    </script>
+<script defer type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script>
+<noscript b-ot8wsujqi9>
+        <div b-ot8wsujqi9 class="statcounter">
+            <a b-ot8wsujqi9 title="Web Analytics"
+               href="https://statcounter.com/" target="_blank">
+                <img b-ot8wsujqi9 class="statcounter"
+                     src="https://c.statcounter.com/12551630/0/53ae76e2/1/"
+                     alt="Web Analytics">
+            </a>
+        </div>
+    </noscript>
+
+<script type="text/javascript">
+
+    </script>
+<div b-ot8wsujqi9 id="fb-root"></div>
+
+
+<script defer src="https://www.googletagmanager.com/gtag/js?id=UA-199845778-1"></script>
+<script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-199845778-1');
+    </script>
+</body>
+</html>

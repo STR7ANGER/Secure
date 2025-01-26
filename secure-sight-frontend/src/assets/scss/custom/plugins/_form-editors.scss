@@ -1,0 +1,79 @@
+//
+// Form editors.scss
+//
+
+.ql-container {
+    border-bottom-right-radius: 0.25rem !important;
+    border-bottom-left-radius: 0.25rem !important;
+    font-family: $font-family-base;
+
+    &.ql-snow {
+        border-color: $input-border-color;
+    }
+}
+
+.ql-bubble {
+    border: $input-border-width solid $input-border-color;
+    border-radius: $input-border-radius;
+}
+
+.ql-toolbar {
+    border-top-left-radius: 0.25rem !important;
+    border-top-right-radius: 0.25rem !important;
+    font-family: $font-family-base !important;
+    span {
+        outline: none !important;
+        color: $body-color;
+
+        &:hover {
+            color: $primary !important;
+        }
+    }
+
+    &.ql-snow {
+        border-color: $input-border-color;
+
+        .ql-picker.ql-expanded {
+            .ql-picker-label {
+                border-color: transparent;
+            }
+        }
+    }
+}
+
+.ql-editing{
+    right: 0 !important;
+    top: 0 !important;
+    left: auto !important;
+
+}
+
+.ql-snow .ql-tooltip {
+    background-color: $dropdown-bg;
+    color: $dropdown-link-color;
+    box-shadow: $dropdown-box-shadow;
+    border: $dropdown-border-width solid $dropdown-border-color;
+     
+    input{
+        background: $input-bg;
+        color: $input-color;
+        border-color: $input-focus-border-color !important;
+    }
+}
+.ql-snow {
+    .ql-stroke,
+    .ql-script,
+    .ql-strike svg {
+        stroke: $body-color;
+    }
+    .ql-fill {
+        fill: $body-color;
+    }
+}
+
+.ql-snow {
+    .ql-picker-options {
+        background-color: $dropdown-bg;
+        border-color: $dropdown-border-color !important;
+    }
+}

@@ -1,0 +1,46 @@
+# Node modules
+/node_modules
+/.pnp
+.pnp.js
+
+# Build output
+/dist
+/build
+/coverage
+/.next
+/.nuxt
+
+# Testing
+/coverage
+
+# Production
+/build
+
+# Miscellaneous files
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional npm cache directory
+.npm
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Local environment files
+.local
+
+# VSCode settings
+.vscode/
+
+# IDE-specific files
+.idea/
+*.sublime-project
+*.sublime-workspace

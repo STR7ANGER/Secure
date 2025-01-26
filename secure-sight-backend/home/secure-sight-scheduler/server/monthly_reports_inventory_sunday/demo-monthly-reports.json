@@ -1,0 +1,184 @@
+[
+    {
+        "Detailed Summary": {
+            "Total No of Incidents": {
+                "Total Incidents": 2109,
+                "Month & Year": "7/2024"
+            },
+            "Risk Index": {
+                "Score": 58,
+                "Description": "The Risk Index is a comprehensive score based on the dynamic assessment of risk factors inclusive of exposure, attack risk, and security configurations risk. You can take company-wide remediation steps and preventive measures to lower the company-wide risk index over time."
+            },
+            "No of Highly Exploitable Unique CVEs": 1531,
+            "No of Incidents Closed without acknowledgement": 0,
+            "Top incidents": [
+                {
+                    "Incident Names with no of Occurrence": "Multiple Failed Logons via Windows Event - 1771",
+                    "Priority - Impact": "P4 - Low",
+                    "Data Source": "SAE"
+                },
+                {
+                    "Incident Names with no of Occurrence": "Input Capture via Password Prompt - MacOS - 130",
+                    "Priority - Impact": "P3 - Medium",
+                    "Data Source": "SAE"
+                },
+                {
+                    "Incident Names with no of Occurrence": "Windows Logon Failed Attempt from Private IP - 122",
+                    "Priority - Impact": "P4 - Low",
+                    "Data Source": "SAE"
+                },
+                {
+                    "Incident Names with no of Occurrence": "Mac Sandbox Discovery - 58",
+                    "Priority - Impact": "P3 - Medium",
+                    "Data Source": "SAE"
+                },
+                {
+                    "Incident Names with no of Occurrence": "Hidden User Creation - MacOS - 6",
+                    "Priority - Impact": "P3 - Medium",
+                    "Data Source": "SAE"
+                },
+                {
+                    "No of Incidents": 2087
+                }
+            ]
+        },
+        "Risk Matrics": {
+            "Last Three Month Risk Score": {
+                "May": "NA",
+                "June": 44,
+                "July": 44
+            }
+        },
+        "Executive Summary": {
+            "Incident Overview by SOC Team": [
+                {
+                    "No of Incidents": 19,
+                    "Name of Incident": "Suspicious Powershell Connection To Web Service",
+                    "Description": "The adversary attempted to download a payload stored on a legitimate external web service."
+                },
+                {
+                    "No of Incidents": 11,
+                    "Name of Incident": "Possible Account Compromise - Atypical Travel",
+                    "Description": "User account has a successful sign-in attempt originating from a location that is unusual based on the known travel behavior of the user."
+                },
+                {
+                    "No of Incidents": 10,
+                    "Name of Incident": "[Heuristic Attribute] Possible OS Credential Dumping",
+                    "Description": "Detects Possible Dumping of OS Information Technique"
+                },
+                {
+                    "No of Incidents": 8,
+                    "Name of Incident": "Hacking Tool Detection - Blocked",
+                    "Description": "A hacking tool, which is generally used for cracking computer and network security or by system administrators to test security, was detected and blocked on an endpoint."
+                },
+                {
+                    "No of Incidents": 6,
+                    "Name of Incident": "Eicar Test File Detection",
+                    "Description": "Eicar test file is detected in the system."
+                }
+            ],
+            "Action Performed by SOC Team": [
+                {
+                    "No of Incidents": 19,
+                    "Name of Incident": "Suspicious Powershell Connection To Web Service",
+                    "Action Performed": ""
+                },
+                {
+                    "No of Incidents": 11,
+                    "Name of Incident": "Possible Account Compromise - Atypical Travel",
+                    "Action Performed": ""
+                },
+                {
+                    "No of Incidents": 10,
+                    "Name of Incident": "[Heuristic Attribute] Possible OS Credential Dumping",
+                    "Action Performed": ""
+                },
+                {
+                    "No of Incidents": 8,
+                    "Name of Incident": "Hacking Tool Detection - Blocked",
+                    "Action Performed": ""
+                },
+                {
+                    "No of Incidents": 6,
+                    "Name of Incident": "Eicar Test File Detection",
+                    "Action Performed": ""
+                }
+            ],
+            "Recommendations by SOC Team": [
+                {
+                    "No of Incidents": 19,
+                    "Name of Incident": "Suspicious Powershell Connection To Web Service",
+                    "Recommendations": ""
+                },
+                {
+                    "No of Incidents": 11,
+                    "Name of Incident": "Possible Account Compromise - Atypical Travel",
+                    "Recommendations": ""
+                },
+                {
+                    "No of Incidents": 10,
+                    "Name of Incident": "[Heuristic Attribute] Possible OS Credential Dumping",
+                    "Recommendations": ""
+                },
+                {
+                    "No of Incidents": 8,
+                    "Name of Incident": "Hacking Tool Detection - Blocked",
+                    "Recommendations": ""
+                },
+                {
+                    "No of Incidents": 6,
+                    "Name of Incident": "Eicar Test File Detection",
+                    "Recommendations": ""
+                }
+            ]
+        },
+        "Detection Summary from A1": {
+            "Detection Summary form Apex One": {
+                "Virus/Malware & Spyware/Grayware": {
+                    "File Cleaned (Virus/Malware + Spyware/Grayware)": 264,
+                    "File Quarantine (Virus / Malware)": 80,
+                    "Restart Action Required (Virus / Malware)": 0,
+                    "File Deleted (Virus / Malware)": 0
+                },
+                "C & C Connections & Intrusion attempts Blocked": {
+                    "Total C & C Connections Blocked": 13843,
+                    "Total Intrusion Attempts Blocked": 0
+                }
+            },
+            "Top 03 Endpoints": {
+                "File Cleaned/Spyware": [
+                    [
+                        "WINDEV2401EVAL",
+                        70
+                    ]
+                ],
+                "File Cleaned/Malware": [
+                    [
+                        "WINDEV2401EVAL",
+                        193
+                    ],
+                    [
+                        "IN0331401",
+                        1
+                    ]
+                ],
+                "File Deleted": [],
+                "C & C Connection Blocked": [
+                    [
+                        "WINDEV2401EVAL",
+                        10910
+                    ],
+                    [
+                        "IN022136",
+                        2738
+                    ],
+                    [
+                        "IN022149",
+                        151
+                    ]
+                ],
+                "Intrusion Attempts Blocked": []
+            }
+        }
+    }
+]

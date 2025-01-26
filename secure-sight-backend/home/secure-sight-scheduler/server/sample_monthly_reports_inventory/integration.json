@@ -1,0 +1,40 @@
+{
+    "name": "monthly_reports_inventory",
+    "display_name": "sample_monthly_reports_inventory",
+    "config": {
+        "properties": {
+            "api_key": {
+                "type": "string",
+                "isPathArg": "false",
+                 "position": "1"
+            },
+            "secret_key":{
+                "type": "string",
+                "isPathArg": "false",
+                 "position": "2"
+            }
+        }
+    },
+    "actions": [
+        {
+            "name": "monthly_reports_inventory",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "example_input",
+                    "type": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "example_output",
+                    "type": "string"
+                },
+                {
+                    "name": "api_key",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

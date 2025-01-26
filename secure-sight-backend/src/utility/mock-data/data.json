@@ -1,0 +1,2488 @@
+{
+    "role": "tenant_admin",
+    "email": "admin@techm.com",
+    "dbName": "techm",
+    "name": "qradar2",
+    "display_name": "VisionOne QRadar",
+    "category": "Security",
+    "config": {
+        "title": "url",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "url": {
+                "type": "string"
+            },
+            "token": {
+                "type": "string"
+            }
+        }
+    },
+    "test_config": {
+        "name": "qradar.test_integration",
+        "module": "qradar.src.test_integration.TestIntegration",
+        "inputs": []
+    },
+    "actions": [
+        {
+            "name": "qradar.retrieveRules",
+            "display_name": "Retrieves a list of rules",
+            "module": "qradar.src.retrieveRules.RetrieveRulesAction",
+            "type": "MISTRAL",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "owner",
+                    "type": "string"
+                },
+                {
+                    "name": "identifier",
+                    "type": "string"
+                },
+                {
+                    "name": "base_host_id",
+                    "type": "integer"
+                },
+                {
+                    "name": "capacity_timestamp",
+                    "type": "integer"
+                },
+                {
+                    "name": "origin",
+                    "type": "string"
+                },
+                {
+                    "name": "creation_date",
+                    "type": "string"
+                },
+                {
+                    "name": "type",
+                    "type": "string"
+                },
+                {
+                    "name": "enabled",
+                    "type": "string"
+                },
+                {
+                    "name": "modification_date",
+                    "type": "integer"
+                },
+                {
+                    "name": "linked_rule_identifier",
+                    "type": "string"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "average_capacity",
+                    "type": "integer"
+                },
+                {
+                    "name": "id",
+                    "type": "integer"
+                },
+                {
+                    "name": "base_capacity",
+                    "type": "integer"
+                }
+            ]
+        },
+        {
+            "name": "qradar.CreateCasesFromOffenses",
+            "display_name": "Get offenses from QRadar and create Cases",
+            "module": "qradar.src.create_cases_from_offenses.CreateCasesFromOffenses",
+            "type": "MISTRAL",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "result",
+                    "type": "object"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarOffensesList",
+            "display_name": "Gets offenses from QRadar.",
+            "module": "qradar.src.qradar_offenses_list.QradarOffensesList",
+            "type": "MISTRAL",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "assigned_to",
+                    "type": "string"
+                },
+                {
+                    "name": "categories",
+                    "type": "list"
+                },
+                {
+                    "name": "category_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "close_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "closing_reason_id",
+                    "type": "integer"
+                },
+                {
+                    "name": "closing_user",
+                    "type": "string"
+                },
+                {
+                    "name": "credibility",
+                    "type": "integer"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "name": "destination_networks",
+                    "type": "list"
+                },
+                {
+                    "name": "device_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "domain_id",
+                    "type": "integer"
+                },
+                {
+                    "name": "event_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "flow_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "follow_up",
+                    "type": "boolean"
+                },
+                {
+                    "name": "id",
+                    "type": "integer"
+                },
+                {
+                    "name": "inactive",
+                    "type": "boolean"
+                },
+                {
+                    "name": "last_updated_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "local_destination_address_ids",
+                    "type": "list"
+                },
+                {
+                    "name": "local_destination_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "magnitude",
+                    "type": "integer"
+                },
+                {
+                    "name": "offense_source",
+                    "type": "string"
+                },
+                {
+                    "name": "offense_type",
+                    "type": "integer"
+                },
+                {
+                    "name": "policy_category_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "protected",
+                    "type": "boolean"
+                },
+                {
+                    "name": "relevance",
+                    "type": "integer"
+                },
+                {
+                    "name": "remote_destination_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "security_category_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "severity",
+                    "type": "integer"
+                },
+                {
+                    "name": "source_address_ids",
+                    "type": "list"
+                },
+                {
+                    "name": "source_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "source_network",
+                    "type": "string"
+                },
+                {
+                    "name": "start_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "status",
+                    "type": "string"
+                },
+                {
+                    "name": "username_count",
+                    "type": "integer"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarOffenseUpdate",
+            "display_name": "Updates an offense.",
+            "module": "qradar.src.qradar_offense_update.QradarOffenseUpdate",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "offense_id",
+                    "type": "integer"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "assigned_to",
+                    "type": "string"
+                },
+                {
+                    "name": "categories",
+                    "type": "list"
+                },
+                {
+                    "name": "category_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "close_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "closing_reason_id",
+                    "type": "integer"
+                },
+                {
+                    "name": "closing_user",
+                    "type": "string"
+                },
+                {
+                    "name": "credibility",
+                    "type": "integer"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "name": "destination_networks",
+                    "type": "list"
+                },
+                {
+                    "name": "device_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "domain_id",
+                    "type": "integer"
+                },
+                {
+                    "name": "event_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "flow_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "follow_up",
+                    "type": "boolean"
+                },
+                {
+                    "name": "id",
+                    "type": "integer"
+                },
+                {
+                    "name": "inactive",
+                    "type": "boolean"
+                },
+                {
+                    "name": "last_updated_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "local_destination_address_ids",
+                    "type": "list"
+                },
+                {
+                    "name": "local_destination_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "magnitude",
+                    "type": "integer"
+                },
+                {
+                    "name": "offense_source",
+                    "type": "string"
+                },
+                {
+                    "name": "offense_type",
+                    "type": "integer"
+                },
+                {
+                    "name": "policy_category_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "protected",
+                    "type": "boolean"
+                },
+                {
+                    "name": "relevance",
+                    "type": "integer"
+                },
+                {
+                    "name": "remote_destination_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "security_category_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "severity",
+                    "type": "integer"
+                },
+                {
+                    "name": "source_address_ids",
+                    "type": "list"
+                },
+                {
+                    "name": "source_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "source_network",
+                    "type": "string"
+                },
+                {
+                    "name": "start_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "status",
+                    "type": "string"
+                },
+                {
+                    "name": "username_count",
+                    "type": "integer"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarClosingReasons",
+            "display_name": "Retrieves a list of offense closing reasons.",
+            "module": "qradar.src.qradar_closing_reasons.QradarClosingReasons",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "closing_reason_id",
+                    "type": "integer"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "id",
+                    "type": "integer"
+                },
+                {
+                    "name": "is_deleted",
+                    "type": "boolean"
+                },
+                {
+                    "name": "is_reserved",
+                    "type": "boolean"
+                },
+                {
+                    "name": "text",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarOffenseNotesList",
+            "display_name": "Retrieves a list of notes for an offense.",
+            "module": "qradar.src.qradar_offense_notes_list.QradarOffenseNotesList",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "offense_id",
+                    "type": "integer"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "create_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "id",
+                    "type": "integer"
+                },
+                {
+                    "name": "note_text",
+                    "type": "string"
+                },
+                {
+                    "name": "username",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarOffenseNoteCreate",
+            "display_name": "Creates a note on an offense.",
+            "module": "qradar.src.qradar_offense_note_create.QradarOffenseNoteCreate",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "offense_id",
+                    "type": "integer"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "create_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "id",
+                    "type": "integer"
+                },
+                {
+                    "name": "note_text",
+                    "type": "string"
+                },
+                {
+                    "name": "username",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarRuleGroupsList",
+            "display_name": "Retrieves a list of the rule groups.",
+            "module": "qradar.src.qradar_rule_groups_list.QradarRuleGroupsList",
+            "type": "MISTRAL",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "status",
+                    "type": "integer"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarAssetsList",
+            "display_name": "Retrieves assets list.",
+            "module": "qradar.src.qradar_assets_list.QradarAssetsList",
+            "type": "MISTRAL",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "id",
+                    "type": "integer"
+                },
+                {
+                    "name": "domain_id",
+                    "type": "integer"
+                },
+                {
+                    "name": "interfaces",
+                    "type": "list"
+                },
+                {
+                    "name": "properties",
+                    "type": "list"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarSavedSearchesList",
+            "display_name": "Retrieves a list of Ariel saved searches.",
+            "module": "qradar.src.qradar_saved_searches_list.QradarSavedSearchesList",
+            "type": "MISTRAL",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "database",
+                    "type": "string"
+                },
+                {
+                    "name": "id",
+                    "type": "integer"
+                },
+                {
+                    "name": "is_shared",
+                    "type": "boolean"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "owner",
+                    "type": "string"
+                },
+                {
+                    "name": "uid",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarSearchesList",
+            "display_name": "Retrieves the list of Ariel searches IDs. Search status and results can be polled by sending the search ID to the 'qradar-search-status-get' and 'qradar-search-results-get' commands.",
+            "module": "qradar.src.qradar_searches_list.QradarSearchesList",
+            "type": "MISTRAL",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "String",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarSearchCreate",
+            "display_name": "Creates a new asynchronous Ariel search. Returns the search ID. Search status and results can be polled by sending the search ID to the 'qradar-search-status-get' and 'qradar-search-results-get' commands. Accepts SELECT query expressions only.",
+            "module": "qradar.src.qradar_search_create.QradarSearchCreate",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "query_expression",
+                    "type": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "cursor_id",
+                    "type": "string"
+                },
+                {
+                    "name": "compressed_data_file_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "compressed_data_total_size",
+                    "type": "integer"
+                },
+                {
+                    "name": "data_file_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "data_total_size",
+                    "type": "integer"
+                },
+                {
+                    "name": "index_file_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "index_total_size",
+                    "type": "integer"
+                },
+                {
+                    "name": "processed_record_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "error_messages",
+                    "type": "list"
+                },
+                {
+                    "name": "desired_retention_time_msec",
+                    "type": "integer"
+                },
+                {
+                    "name": "progress",
+                    "type": "integer"
+                },
+                {
+                    "name": "progress_details",
+                    "type": "list"
+                },
+                {
+                    "name": "query_execution_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "query_string",
+                    "type": "string"
+                },
+                {
+                    "name": "record_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "save_results",
+                    "type": "boolean"
+                },
+                {
+                    "name": "status",
+                    "type": "string"
+                },
+                {
+                    "name": "snapshot",
+                    "type": "object"
+                },
+                {
+                    "name": "subsearch_ids",
+                    "type": "list"
+                },
+                {
+                    "name": "search_id",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarSearchStatusGet",
+            "display_name": "Retrieves status information for a search, based on the search ID.",
+            "module": "qradar.src.qradar_search_status_get.QradarSearchStatusGet",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "search_id",
+                    "type": "integer"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "cursor_id",
+                    "type": "string"
+                },
+                {
+                    "name": "compressed_data_file_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "compressed_data_total_size",
+                    "type": "integer"
+                },
+                {
+                    "name": "data_file_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "data_total_size",
+                    "type": "integer"
+                },
+                {
+                    "name": "index_file_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "index_total_size",
+                    "type": "integer"
+                },
+                {
+                    "name": "processed_record_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "error_messages",
+                    "type": "list"
+                },
+                {
+                    "name": "desired_retention_time_msec",
+                    "type": "integer"
+                },
+                {
+                    "name": "progress",
+                    "type": "integer"
+                },
+                {
+                    "name": "progress_details",
+                    "type": "list"
+                },
+                {
+                    "name": "query_execution_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "query_string",
+                    "type": "string"
+                },
+                {
+                    "name": "record_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "save_results",
+                    "type": "boolean"
+                },
+                {
+                    "name": "status",
+                    "type": "string"
+                },
+                {
+                    "name": "snapshot",
+                    "type": "object"
+                },
+                {
+                    "name": "subsearch_ids",
+                    "type": "list"
+                },
+                {
+                    "name": "search_id",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarSearchResultsGet",
+            "display_name": "Retrieves search results.",
+            "module": "qradar.src.qradar_search_results_get.QradarSearchResultsGet",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "search_id",
+                    "type": "integer"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "events",
+                    "type": "list"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarReferenceSetsList",
+            "display_name": "Retrieves a list of reference sets.",
+            "module": "qradar.src.qradar_reference_sets_list.QradarReferenceSetsList",
+            "type": "MISTRAL",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "creation_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "element_type",
+                    "type": "string"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "number_of_elements",
+                    "type": "integer"
+                },
+                {
+                    "name": "time_to_live",
+                    "type": "string"
+                },
+                {
+                    "name": "timeout_type",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarReferenceSetCreate",
+            "display_name": "Creates a new reference set.",
+            "module": "qradar.src.qradar_reference_set_create.QradarReferenceSetCreate",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "ref_name",
+                    "type": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "creation_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "element_type",
+                    "type": "string"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "number_of_elements",
+                    "type": "integer"
+                },
+                {
+                    "name": "time_to_live",
+                    "type": "string"
+                },
+                {
+                    "name": "timeout_type",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarReferenceSetDelete",
+            "display_name": "Removes a reference set or purges its contents.",
+            "module": "qradar.src.qradar_reference_set_delete.QradarReferenceSetDelete",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "ref_name",
+                    "type": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "current_status",
+                    "type": "object"
+                },
+                {
+                    "name": "message",
+                    "type": "string"
+                },
+                {
+                    "name": "status_location",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarReferenceSetValueUpsert",
+            "display_name": "Adds or updates an element in a reference set.",
+            "module": "qradar.src.qradar_reference_set_value_upsert.QradarReferenceSetValueUpsert",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "ref_name",
+                    "type": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "creation_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "element_type",
+                    "type": "string"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "number_of_elements",
+                    "type": "integer"
+                },
+                {
+                    "name": "time_to_live",
+                    "type": "string"
+                },
+                {
+                    "name": "timeout_type",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarReferenceSetValueDelete",
+            "display_name": "Removes a value from a reference set.",
+            "module": "qradar.src.qradar_reference_set_value_delete.QradarReferenceSetValueDelete",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "ref_name",
+                    "type": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "creation_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "element_type",
+                    "type": "string"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "number_of_elements",
+                    "type": "integer"
+                },
+                {
+                    "name": "time_to_live",
+                    "type": "string"
+                },
+                {
+                    "name": "timeout_type",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarIndicatorsUpload",
+            "display_name": "Uploads indicators to QRadar.",
+            "module": "qradar.src.qradar_indicators_upload.QradarIndicatorsUpload",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "ref_name",
+                    "type": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "creation_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "element_type",
+                    "type": "string"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "number_of_elements",
+                    "type": "integer"
+                },
+                {
+                    "name": "time_to_live",
+                    "type": "string"
+                },
+                {
+                    "name": "timeout_type",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarGeolocationsForIp",
+            "display_name": "Retrieves the MaxMind GeoIP data for the specified IP address.",
+            "module": "qradar.src.qradar_geolocations_for_ip.QradarGeolocationsForIp",
+            "type": "MISTRAL",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "result",
+                    "type": "object"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarLogSourcesList",
+            "display_name": "Retrieves a list of log sources.",
+            "module": "qradar.src.qradar_log_sources_list.QradarLogSourcesList",
+            "type": "MISTRAL",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "result",
+                    "type": "object"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarGetCustomProperties",
+            "display_name": "Retrieves a list of event regex properties.",
+            "module": "qradar.src.qradar_get_custom_properties.QradarGetCustomProperties",
+            "type": "MISTRAL",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "creation_date",
+                    "type": "integer"
+                },
+                {
+                    "name": "datetime_format",
+                    "type": "string"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "name": "id",
+                    "type": "integer"
+                },
+                {
+                    "name": "identifier",
+                    "type": "string"
+                },
+                {
+                    "name": "locale",
+                    "type": "string"
+                },
+                {
+                    "name": "modification_date",
+                    "type": "integer"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "property_type",
+                    "type": "string"
+                },
+                {
+                    "name": "use_for_rule_engine",
+                    "type": "boolean"
+                },
+                {
+                    "name": "username",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarResetLastRun",
+            "display_name": "Resets the fetch incidents last run value, which resets the fetch to its initial fetch state. (Will try to fetch the first available offense).",
+            "module": "qradar.src.qradar_reset_last_run.QradarResetLastRun",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "ctx",
+                    "type": "string"
+                },
+                {
+                    "name": "version",
+                    "type": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "result",
+                    "type": "object"
+                }
+            ]
+        },
+        {
+            "name": "qradar.GetMappingFields",
+            "display_name": "Returns the list of fields for an incident type. This command should be used for debugging purposes.",
+            "module": "qradar.src.get_mapping_fields.GetMappingFields",
+            "type": "MISTRAL",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "creation_date",
+                    "type": "integer"
+                },
+                {
+                    "name": "datetime_format",
+                    "type": "string"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "name": "id",
+                    "type": "integer"
+                },
+                {
+                    "name": "identifier",
+                    "type": "string"
+                },
+                {
+                    "name": "locale",
+                    "type": "string"
+                },
+                {
+                    "name": "modification_date",
+                    "type": "integer"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "property_type",
+                    "type": "string"
+                },
+                {
+                    "name": "use_for_rule_engine",
+                    "type": "bool"
+                },
+                {
+                    "name": "username",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarOffenses",
+            "display_name": "Gets offenses from QRadar.",
+            "module": "qradar.src.qradar_offenses.QradarOffenses",
+            "type": "MISTRAL",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "assigned_to",
+                    "type": "string"
+                },
+                {
+                    "name": "categories",
+                    "type": "list"
+                },
+                {
+                    "name": "category_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "close_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "closing_reason_id",
+                    "type": "integer"
+                },
+                {
+                    "name": "closing_user",
+                    "type": "string"
+                },
+                {
+                    "name": "credibility",
+                    "type": "integer"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "name": "destination_networks",
+                    "type": "list"
+                },
+                {
+                    "name": "device_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "domain_id",
+                    "type": "integer"
+                },
+                {
+                    "name": "event_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "flow_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "follow_up",
+                    "type": "boolean"
+                },
+                {
+                    "name": "id",
+                    "type": "integer"
+                },
+                {
+                    "name": "inactive",
+                    "type": "boolean"
+                },
+                {
+                    "name": "last_updated_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "local_destination_address_ids",
+                    "type": "list"
+                },
+                {
+                    "name": "local_destination_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "magnitude",
+                    "type": "integer"
+                },
+                {
+                    "name": "offense_source",
+                    "type": "string"
+                },
+                {
+                    "name": "offense_type",
+                    "type": "integer"
+                },
+                {
+                    "name": "policy_category_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "protected",
+                    "type": "boolean"
+                },
+                {
+                    "name": "relevance",
+                    "type": "integer"
+                },
+                {
+                    "name": "remote_destination_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "security_category_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "severity",
+                    "type": "integer"
+                },
+                {
+                    "name": "source_address_ids",
+                    "type": "list"
+                },
+                {
+                    "name": "source_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "source_network",
+                    "type": "string"
+                },
+                {
+                    "name": "start_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "status",
+                    "type": "string"
+                },
+                {
+                    "name": "username_count",
+                    "type": "integer"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarOffenseById",
+            "display_name": "Gets offense with matching offense ID from qradar.",
+            "module": "qradar.src.qradar_offense_by_id.QradarOffenseById",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "offense_id",
+                    "type": "integer"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "assigned_to",
+                    "type": "string"
+                },
+                {
+                    "name": "categories",
+                    "type": "list"
+                },
+                {
+                    "name": "category_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "close_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "closing_reason_id",
+                    "type": "integer"
+                },
+                {
+                    "name": "closing_user",
+                    "type": "string"
+                },
+                {
+                    "name": "credibility",
+                    "type": "integer"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "name": "destination_networks",
+                    "type": "list"
+                },
+                {
+                    "name": "device_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "domain_id",
+                    "type": "integer"
+                },
+                {
+                    "name": "event_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "flow_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "follow_up",
+                    "type": "boolean"
+                },
+                {
+                    "name": "id",
+                    "type": "integer"
+                },
+                {
+                    "name": "inactive",
+                    "type": "boolean"
+                },
+                {
+                    "name": "last_updated_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "local_destination_address_ids",
+                    "type": "list"
+                },
+                {
+                    "name": "local_destination_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "magnitude",
+                    "type": "integer"
+                },
+                {
+                    "name": "offense_source",
+                    "type": "string"
+                },
+                {
+                    "name": "offense_type",
+                    "type": "integer"
+                },
+                {
+                    "name": "policy_category_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "protected",
+                    "type": "boolean"
+                },
+                {
+                    "name": "relevance",
+                    "type": "integer"
+                },
+                {
+                    "name": "remote_destination_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "security_category_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "severity",
+                    "type": "integer"
+                },
+                {
+                    "name": "source_address_ids",
+                    "type": "list"
+                },
+                {
+                    "name": "source_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "source_network",
+                    "type": "string"
+                },
+                {
+                    "name": "start_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "status",
+                    "type": "string"
+                },
+                {
+                    "name": "username_count",
+                    "type": "integer"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarUpdateOffense",
+            "display_name": "Update an offense.",
+            "module": "qradar.src.qradar_update_offense.QradarUpdateOffense",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "offense_id",
+                    "type": "integer"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "create_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "id",
+                    "type": "integer"
+                },
+                {
+                    "name": "note_text",
+                    "type": "string"
+                },
+                {
+                    "name": "username",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarSearches",
+            "display_name": "Searches in QRadar using AQL. It is highly recommended to use the playbook 'QRadarFullSearch' instead of this command - it will execute the search, and will return the result.",
+            "module": "qradar.src.qradar_searches.QradarSearches",
+            "type": "MISTRAL",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "cursor_id",
+                    "type": "string"
+                },
+                {
+                    "name": "compressed_data_file_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "compressed_data_total_size",
+                    "type": "integer"
+                },
+                {
+                    "name": "data_file_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "data_total_size",
+                    "type": "integer"
+                },
+                {
+                    "name": "index_file_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "index_total_size",
+                    "type": "integer"
+                },
+                {
+                    "name": "processed_record_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "error_messages",
+                    "type": "list"
+                },
+                {
+                    "name": "desired_retention_time_msec",
+                    "type": "integer"
+                },
+                {
+                    "name": "progress",
+                    "type": "integer"
+                },
+                {
+                    "name": "progress_details",
+                    "type": "list"
+                },
+                {
+                    "name": "query_execution_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "query_string",
+                    "type": "string"
+                },
+                {
+                    "name": "record_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "save_results",
+                    "type": "boolean"
+                },
+                {
+                    "name": "status",
+                    "type": "string"
+                },
+                {
+                    "name": "snapshot",
+                    "type": "object"
+                },
+                {
+                    "name": "subsearch_ids",
+                    "type": "list"
+                },
+                {
+                    "name": "search_id",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarGetSearch",
+            "display_name": "Gets a specific search id and status.",
+            "module": "qradar.src.qradar_get_search.QradarGetSearch",
+            "type": "MISTRAL",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "cursor_id",
+                    "type": "string"
+                },
+                {
+                    "name": "compressed_data_file_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "compressed_data_total_size",
+                    "type": "integer"
+                },
+                {
+                    "name": "data_file_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "data_total_size",
+                    "type": "integer"
+                },
+                {
+                    "name": "index_file_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "index_total_size",
+                    "type": "integer"
+                },
+                {
+                    "name": "processed_record_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "error_messages",
+                    "type": "list"
+                },
+                {
+                    "name": "desired_retention_time_msec",
+                    "type": "integer"
+                },
+                {
+                    "name": "progress",
+                    "type": "integer"
+                },
+                {
+                    "name": "progress_details",
+                    "type": "list"
+                },
+                {
+                    "name": "query_execution_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "query_string",
+                    "type": "string"
+                },
+                {
+                    "name": "record_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "save_results",
+                    "type": "boolean"
+                },
+                {
+                    "name": "status",
+                    "type": "string"
+                },
+                {
+                    "name": "snapshot",
+                    "type": "object"
+                },
+                {
+                    "name": "subsearch_ids",
+                    "type": "list"
+                },
+                {
+                    "name": "search_id",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarGetSearchResults",
+            "display_name": "Gets search results.",
+            "module": "qradar.src.qradar_get_search_results.QradarGetSearchResults",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "search_id",
+                    "type": "integer"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "events",
+                    "type": "list"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarGetAssets",
+            "display_name": "List all assets found in the model.",
+            "module": "qradar.src.qradar_get_assets.QradarGetAssets",
+            "type": "MISTRAL",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "id",
+                    "type": "integer"
+                },
+                {
+                    "name": "domain_id",
+                    "type": "integer"
+                },
+                {
+                    "name": "interfaces",
+                    "type": "list"
+                },
+                {
+                    "name": "properties",
+                    "type": "list"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarGetAssetById",
+            "display_name": "Retrieves the asset by id. ",
+            "module": "qradar.src.qradar_get_asset_by_id.QradarGetAssetById",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "asset_id",
+                    "type": "integer"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "id",
+                    "type": "integer"
+                },
+                {
+                    "name": "domain_id",
+                    "type": "integer"
+                },
+                {
+                    "name": "interfaces",
+                    "type": "list"
+                },
+                {
+                    "name": "properties",
+                    "type": "list"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarGetClosingReasons",
+            "display_name": "Get closing reasons.",
+            "module": "qradar.src.qradar_get_closing_reasons.QradarGetClosingReasons",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "closing_reason_id",
+                    "type": "integer"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "id",
+                    "type": "integer"
+                },
+                {
+                    "name": "is_deleted",
+                    "type": "boolean"
+                },
+                {
+                    "name": "is_reserved",
+                    "type": "boolean"
+                },
+                {
+                    "name": "text",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarGetNote",
+            "display_name": "Retrieve a note for an offense.",
+            "module": "qradar.src.qradar_get_note.QradarGetNote",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "offense_id",
+                    "type": "integer"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "create_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "id",
+                    "type": "integer"
+                },
+                {
+                    "name": "note_text",
+                    "type": "string"
+                },
+                {
+                    "name": "username",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarCreateNote",
+            "display_name": "Create a note on an offense.",
+            "module": "qradar.src.qradar_create_note.QradarCreateNote",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "offense_id",
+                    "type": "integer"
+                },
+                {
+                    "name": "note_text",
+                    "type": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "create_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "id",
+                    "type": "integer"
+                },
+                {
+                    "name": "note_text",
+                    "type": "string"
+                },
+                {
+                    "name": "username",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarGetReferenceByName",
+            "display_name": "Information about the reference set that had data added or updated. This returns the information set, but not the contained data. This feature is supported from version 8.1 and upward.",
+            "module": "qradar.src.qradar_get_reference_by_name.QradarGetReferenceByName",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "ref_name",
+                    "type": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "creation_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "data",
+                    "type": "list"
+                },
+                {
+                    "name": "element_type",
+                    "type": "string"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "number_of_elements",
+                    "type": "integer"
+                },
+                {
+                    "name": "time_to_live",
+                    "type": "string"
+                },
+                {
+                    "name": "timeout_type",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarCreateReferenceSet",
+            "display_name": "Creates a new reference set. If the provided name is already in use, this command will fail.",
+            "module": "qradar.src.qradar_create_reference_set.QradarCreateReferenceSet",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "ref_name",
+                    "type": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "creation_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "element_type",
+                    "type": "string"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "number_of_elements",
+                    "type": "integer"
+                },
+                {
+                    "name": "time_to_live",
+                    "type": "string"
+                },
+                {
+                    "name": "timeout_type",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarDeleteReferenceSet",
+            "display_name": "Deletes a reference set corresponding to the name provided.",
+            "module": "qradar.src.qradar_delete_reference_set.QradarDeleteReferenceSet",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "ref_names",
+                    "type": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "current_status",
+                    "type": "object"
+                },
+                {
+                    "name": "message",
+                    "type": "string"
+                },
+                {
+                    "name": "status_location",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarCreateReferenceSetValue",
+            "display_name": "Add or update a value in a reference set.",
+            "module": "qradar.src.qradar_create_reference_set_value.QradarCreateReferenceSetValue",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "ref_name",
+                    "type": "string"
+                },
+                {
+                    "name": "value",
+                    "type": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "creation_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "element_type",
+                    "type": "string"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "number_of_elements",
+                    "type": "integer"
+                },
+                {
+                    "name": "time_to_live",
+                    "type": "string"
+                },
+                {
+                    "name": "timeout_type",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarUpdateReferenceSetValue",
+            "display_name": "Adds or updates a value in a reference set.",
+            "module": "qradar.src.qradar_update_reference_set_value.QradarUpdateReferenceSetValue",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "ref_name",
+                    "type": "string"
+                },
+                {
+                    "name": "value",
+                    "type": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "creation_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "element_type",
+                    "type": "string"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "number_of_elements",
+                    "type": "integer"
+                },
+                {
+                    "name": "time_to_live",
+                    "type": "string"
+                },
+                {
+                    "name": "timeout_type",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarDeleteReferenceSetValue",
+            "display_name": "Deletes a value in a reference set.",
+            "module": "qradar.src.qradar_delete_reference_set_value.QradarDeleteReferenceSetValue",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "ref_name",
+                    "type": "string"
+                },
+                {
+                    "name": "value",
+                    "type": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "creation_time",
+                    "type": "string"
+                },
+                {
+                    "name": "element_type",
+                    "type": "string"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "number_of_elements",
+                    "type": "string"
+                },
+                {
+                    "name": "time_to_live",
+                    "type": "string"
+                },
+                {
+                    "name": "timeout_type",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarGetDomains",
+            "display_name": "Retrieve all Domains.",
+            "module": "qradar.src.qradar_get_domains.QradarGetDomains",
+            "type": "MISTRAL",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "eps",
+                    "type": "object"
+                },
+                {
+                    "name": "fpm",
+                    "type": "object"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarGetDomainById",
+            "display_name": "Retrieves Domain information By ID.",
+            "module": "qradar.src.qradar_get_domain_by_id.QradarGetDomainById",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "domain_id",
+                    "type": "integer"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "eps",
+                    "type": "object"
+                },
+                {
+                    "name": "fpm",
+                    "type": "object"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarUploadIndicators",
+            "display_name": "Uploads indicators from Demisto to Qradar. ",
+            "module": "qradar.src.qradar_upload_indicators.QradarUploadIndicators",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "ref-name",
+                    "type": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "creation_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "element_type",
+                    "type": "string"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "number_of_elements",
+                    "type": "integer"
+                },
+                {
+                    "name": "time_to_live",
+                    "type": "string"
+                },
+                {
+                    "name": "timeout_type",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "qradar.QradarDomainsList",
+            "display_name": "Retrieve all Domains.",
+            "module": "qradar.src.qradar_domains_list.QradarGetDomains",
+            "type": "MISTRAL",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "eps",
+                    "type": "object"
+                },
+                {
+                    "name": "fpm",
+                    "type": "object"
+                }
+            ]
+        },
+        {
+            "name": "qradar.GetRemoteData",
+            "display_name": "Gets remote data from a remote incident. This method does not update the current incident, and should be used for debugging purposes.",
+            "module": "qradar.src.get_remote_data.GetRemoteData",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "remote_incident_id",
+                    "type": "integer"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "assigned_to",
+                    "type": "string"
+                },
+                {
+                    "name": "categories",
+                    "type": "list"
+                },
+                {
+                    "name": "category_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "close_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "closing_reason_id",
+                    "type": "integer"
+                },
+                {
+                    "name": "closing_user",
+                    "type": "string"
+                },
+                {
+                    "name": "credibility",
+                    "type": "integer"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "name": "destination_networks",
+                    "type": "list"
+                },
+                {
+                    "name": "device_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "domain_id",
+                    "type": "integer"
+                },
+                {
+                    "name": "event_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "flow_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "follow_up",
+                    "type": "boolean"
+                },
+                {
+                    "name": "id",
+                    "type": "integer"
+                },
+                {
+                    "name": "inactive",
+                    "type": "boolean"
+                },
+                {
+                    "name": "last_updated_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "local_destination_address_ids",
+                    "type": "list"
+                },
+                {
+                    "name": "local_destination_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "magnitude",
+                    "type": "integer"
+                },
+                {
+                    "name": "offense_source",
+                    "type": "string"
+                },
+                {
+                    "name": "offense_type",
+                    "type": "integer"
+                },
+                {
+                    "name": "policy_category_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "protected",
+                    "type": "boolean"
+                },
+                {
+                    "name": "relevance",
+                    "type": "integer"
+                },
+                {
+                    "name": "remote_destination_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "security_category_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "severity",
+                    "type": "integer"
+                },
+                {
+                    "name": "source_address_ids",
+                    "type": "list"
+                },
+                {
+                    "name": "source_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "source_network",
+                    "type": "string"
+                },
+                {
+                    "name": "start_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "status",
+                    "type": "string"
+                },
+                {
+                    "name": "username_count",
+                    "type": "integer"
+                }
+            ]
+        },
+        {
+            "name": "qradar.GetModifiedRemoteData",
+            "display_name": "Returns the list of incidents IDs that were modified since the last update time. Note that this method is for debugging purposes. The get-modified-remote-data command is used as part of the mirroring feature, which is available from version 6.1.",
+            "module": "qradar.src.get_modified_remote_data.GetModifiedRemoteData",
+            "type": "MISTRAL",
+            "inputs": [
+                {
+                    "name": "remote_incident_id",
+                    "type": "integer"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "assigned_to",
+                    "type": "string"
+                },
+                {
+                    "name": "categories",
+                    "type": "list"
+                },
+                {
+                    "name": "category_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "close_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "closing_reason_id",
+                    "type": "integer"
+                },
+                {
+                    "name": "closing_user",
+                    "type": "string"
+                },
+                {
+                    "name": "credibility",
+                    "type": "integer"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "name": "destination_networks",
+                    "type": "list"
+                },
+                {
+                    "name": "device_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "domain_id",
+                    "type": "integer"
+                },
+                {
+                    "name": "event_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "flow_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "follow_up",
+                    "type": "boolean"
+                },
+                {
+                    "name": "id",
+                    "type": "integer"
+                },
+                {
+                    "name": "inactive",
+                    "type": "boolean"
+                },
+                {
+                    "name": "last_updated_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "local_destination_address_ids",
+                    "type": "list"
+                },
+                {
+                    "name": "local_destination_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "magnitude",
+                    "type": "integer"
+                },
+                {
+                    "name": "offense_source",
+                    "type": "string"
+                },
+                {
+                    "name": "offense_type",
+                    "type": "integer"
+                },
+                {
+                    "name": "policy_category_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "protected",
+                    "type": "boolean"
+                },
+                {
+                    "name": "relevance",
+                    "type": "integer"
+                },
+                {
+                    "name": "remote_destination_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "security_category_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "severity",
+                    "type": "integer"
+                },
+                {
+                    "name": "source_address_ids",
+                    "type": "list"
+                },
+                {
+                    "name": "source_count",
+                    "type": "integer"
+                },
+                {
+                    "name": "source_network",
+                    "type": "string"
+                },
+                {
+                    "name": "start_time",
+                    "type": "integer"
+                },
+                {
+                    "name": "status",
+                    "type": "string"
+                },
+                {
+                    "name": "username_count",
+                    "type": "integer"
+                }
+            ]
+        },
+        {
+            "name": "qraadar.QradarRulesList",
+            "display_name": "Retrieves a list of rules.",
+            "module": "qraadar.src.qradar_rules_list.QradarRulesList",
+            "type": "MISTRAL",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "average_capacity",
+                    "type": "integer"
+                },
+                {
+                    "name": "base_capacity",
+                    "type": "integer"
+                },
+                {
+                    "name": "base_host_id",
+                    "type": "integer"
+                },
+                {
+                    "name": "enabled",
+                    "type": "boolean"
+                },
+                {
+                    "name": "id",
+                    "type": "integer"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "origin",
+                    "type": "string"
+                },
+                {
+                    "name": "owner",
+                    "type": "string"
+                },
+                {
+                    "name": "type",
+                    "type": "string"
+                }
+            ]
+        }
+    ],
+    "filePath": "/home/shailesh/connector_storage/techm/admin@techm.com/qradar2.zip"
+}

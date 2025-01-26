@@ -1,0 +1,167 @@
+.react-grid-layout {
+  position: relative;
+  transition: height 200ms ease;
+}
+.react-grid-item {
+  transition: all 200ms ease;
+  transition-property: left, top;
+  background: #1e1e1e;
+  /* background: #252b3b; */
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  box-shadow: 0px 0px 5px 5px #1b1b1b;
+}
+.react-grid-item span {
+  display: inline-block;
+  padding: 20px 10px;
+}
+.react-grid-item.cssTransforms {
+  transition-property: transform;
+}
+.react-grid-item.resizing {
+  z-index: 1;
+  will-change: width, height;
+}
+
+.react-grid-item.react-draggable-dragging {
+  transition: none;
+  z-index: 3;
+  will-change: transform;
+}
+
+.react-grid-item.react-grid-placeholder {
+  background: red;
+  opacity: 0.2;
+  transition-duration: 100ms;
+  z-index: 2;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.react-grid-item > .react-resizable-handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+}
+
+.react-grid-item > .react-resizable-handle::after {
+  content: "";
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+.Dropdown-menu {
+  background-color: gray !important;
+  border: 1px solid grey !important;
+  box-shadow: 0 1px 0 rgb(4, 3, 3);
+  color: rgb(255, 255, 255) !important;
+}
+
+.Dropdown-control {
+  background-color: grey !important;
+  border: 1px solid grey !important;
+  border-radius: 2px;
+
+  color: rgb(0, 0, 0) !important;
+}
+/* .MuiPaper-root .MuiPaper-elevation .MuiPaper-rounded .MuiPaper-elevation2 .css-x1gawu-MuiPaper-root{
+  width: 80;
+    max-width: 80% ;
+    min-width: 10%;
+}
+.css-1xcjjed-MuiToolbar-root {
+  
+  max-width: 80%  ;
+}
+.css-1jciohi-MuiToolbar-root {
+ 
+  max-width: 80%  ;
+}
+.css-smkl36-MuiCollapse-wrapper{
+  width: 80%  ;
+}  */
+.css-2m8nak-MuiButtonBase-root-MuiButton-root {
+  height: 40px;
+}
+.css-xlxg0a {
+  height: 40px;
+}
+.apexcharts-legend-text {
+  color: aliceblue !important;
+}
+
+.css-1omuo8w-MuiToolbar-root {
+  background-color: silver !important;
+}
+.css-g2tram-MuiToolbar-root {
+  background-color: silver !important;
+}
+.css-1kpq11i {
+  background-color: silver !important
+  ;
+}
+.css-qxov5u {
+  background-color: silver !important;
+}
+.text-Low {
+  color: #00a0de !important;
+}
+.text-Medium {
+  color: #71974c !important;
+}
+.text-High {
+  color: #f8a01a !important;
+}
+.text-Very-High {
+  color: #d34726 !important;
+}
+.text-Critical {
+  color: #a9343a !important;
+}
+.select2-selection__menu {
+  background-color: #a9343a !important;
+  z-index: 1000 !important  ;
+}
+
+.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root {
+  color: white !important;
+}
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-roo {
+  color: white !important;
+}
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+  color: white !important;
+}
+
+.css-1pysi21-MuiFormLabel-root-MuiInputLabel-root {
+  color: white !important;
+}
+
+.label-top {
+  transform: translateY(-10px);
+}
+.css-2m9kme-MuiFormControl-root {
+  border: 1px black solid !important;
+  margin: 5px !important;
+  font-size: medium !important;
+}
+.css-1pysi21-MuiFormLabel-root-MuiInputLabel-root {
+  font-size: small !important;
+}
+.smartscancardlayout {
+  display: grid;
+  grid-gap: 1.6rem;
+  margin-bottom: 1.6rem;
+  grid-auto-rows: minmax(200px, auto);
+  grid-template-columns: repeat(auto-fit, 290px);
+}
