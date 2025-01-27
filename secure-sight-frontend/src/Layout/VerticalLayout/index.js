@@ -1,16 +1,11 @@
 import React, { useCallback, useEffect } from 'react';
-import PropTypes from "prop-types";
-import withRouter from "../../components/Common/withRouter";
-
-// import Components
+import PropTypes from 'prop-types';
+import withRouter from '../../components/Common/withRouter';
 import Sidebar from './Sidebar';
 import Header from './Header';
 import Footer from './Footer';
 import RightSidebar from '../../components/Common/RightSideBar';
-
-//redux
-import { useSelector, useDispatch } from "react-redux";
-
+import { useSelector, useDispatch } from 'react-redux';
 import {
   changeLayout,
   changeSidebarTheme,
@@ -18,71 +13,66 @@ import {
   changeTopbarTheme,
   changeLayoutWidth,
   showRightSidebarAction
-} from "../../store/actions";
+} from '../../store/actions';
 
-// Add these styles to your CSS
-const layoutStyles = {
-  wrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    minHeight: '100vh'
-  },
-  contentWrapper: {
-    display: 'flex',
-    flex: '1 0 auto'
-  },
-  mainContent: {
-    flex: '1 0 auto',
-    display: 'flex',
-    flexDirection: 'column',
-    minHeight: '100vh'
-  },
-  childrenWrapper: {
-    flex: '1 0 auto',
-    paddingBottom: '20px' // Add some spacing above footer
-  }
-};
-
-const Layout = props => {
+const Layout = (props) => {
   const dispatch = useDispatch();
-
   const {
     layoutWidth,
     leftSideBarType,
     topbarTheme,
     showRightSidebar,
-    leftSideBarTheme,
-  } = useSelector(state => ({
+    leftSideBarTheme
+  } = useSelector((state) => ({
     leftSideBarType: state.Layout.leftSideBarType,
     layoutWidth: state.Layout.layoutWidth,
     topbarTheme: state.Layout.topbarTheme,
     showRightSidebar: state.Layout.showRightSidebar,
-    leftSideBarTheme: state.Layout.leftSideBarTheme,
+    leftSideBarTheme: state.Layout.leftSideBarTheme
   }));
 
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   const toggleMenuCallback = () => {
-    if (leftSideBarType === "default") {
-      dispatch(changeSidebarType("condensed", isMobile));
-    } else if (leftSideBarType === "condensed") {
-      dispatch(changeSidebarType("default", isMobile));
+    if (leftSideBarType === 'default') {
+      dispatch(changeSidebarType('condensed', isMobile));
+    } else if (leftSideBarType === 'condensed') {
+      dispatch(changeSidebarType('default', isMobile));
     }
   };
 
-  const hideRightbar = useCallback((event) => {
-    var rightbar = document.getElementById("right-bar");
-    if (rightbar && rightbar.contains(event.target)) {
-      return;
-    } else {
-      dispatch(showRightSidebarAction(false));
-    }
-  }, [dispatch]);
+  const hideRightbar = useCallback(
+    (event) => {
+      var rightbar = document.getElementById('right-bar');
+      if (rightbar && rightbar.contains(event.target)) {
+        return;
+      } else {
+        dispatch(showRightSidebarAction(false));
+      }
+    },
+    [dispatch]
+  );
 
   useEffect(() => {
-    document.body.addEventListener("click", hideRightbar, true);
+    // Set global styles for html, body, and #root
+    document.documentElement.style.height = '100%';
+    document.documentElement.style.margin = '0';
+    document.documentElement.style.padding = '0';
+
+    document.body.style.height = '100%';
+    document.body.style.margin = '0';
+    document.body.style.padding = '0';
+
+    const rootElement = document.getElementById('root');
+    if (rootElement) {
+      rootElement.style.height = '100%';
+      rootElement.style.margin = '0';
+      rootElement.style.padding = '0';
+    }
+
+    document.body.addEventListener('click', hideRightbar, true);
     return () => {
-      document.body.removeEventListener("click", hideRightbar, true);
+      document.body.removeEventListener('click', hideRightbar, true);
     };
   }, [hideRightbar]);
 
@@ -91,7 +81,7 @@ const Layout = props => {
   }, []);
 
   useEffect(() => {
-    dispatch(changeLayout("vertical"));
+    dispatch(changeLayout('vertical'));
   }, [dispatch]);
 
   useEffect(() => {
@@ -118,20 +108,63 @@ const Layout = props => {
     }
   }, [topbarTheme, dispatch]);
 
+  const styles = {
+    root: {
+      height: '100%',
+      margin: 0,
+      padding: 0
+    },
+    layoutWrapper: {
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      backgroundColor: '#000000'
+    },
+    mainContent: {
+      flex: '1 0 auto',
+      display: 'flex',
+      flexDirection: 'column',
+      minHeight: 'calc(100vh - 30px)' // Adjusted for header height
+    },
+    contentWrapper: {
+      display: 'flex',
+      flex: '1 1 auto'
+    },
+    sidebar: {
+      flexShrink: 0
+    },
+    mainSection: {
+      flex: '1 1 auto',
+      marginLeft: leftSideBarType === 'condensed' ? '70px' : '250px',
+      transition: 'margin-left .3s ease-in-out',
+      display: 'flex',
+      flexDirection: 'column',
+      minHeight: 'calc(100vh - 60px)'
+    },
+    pageContent: {
+      flex: '1 1 auto',
+      padding: '20px'
+    }
+  };
+
   return (
     <React.Fragment>
-      <div id="layout-wrapper" style={layoutStyles.wrapper}>
+      <div style={styles.layoutWrapper} id="layout-wrapper">
         <Header toggleMenuCallback={toggleMenuCallback} />
-        <div style={layoutStyles.contentWrapper}>
-          <Sidebar
-            theme={leftSideBarTheme}
-            type={leftSideBarType}
-            isMobile={isMobile}
-          />
-          <div className="main-content" style={layoutStyles.mainContent}>
-            <div style={layoutStyles.childrenWrapper}>
-              {props.children}
+        <div style={styles.contentWrapper}>
+          <div style={styles.sidebar}>
+            <Sidebar
+              theme={leftSideBarTheme}
+              type={leftSideBarType}
+              isMobile={isMobile}
+            />
+          </div>
+          <div style={styles.mainSection}>
+            <div style={styles.mainContent}>
+              <div style={styles.pageContent}>{props.children}</div>
             </div>
+            <hr/>
+            <Footer />
           </div>
         </div>
       </div>
@@ -151,7 +184,7 @@ Layout.propTypes = {
   leftSideBarType: PropTypes.any,
   location: PropTypes.object,
   showRightSidebar: PropTypes.any,
-  topbarTheme: PropTypes.any,
+  topbarTheme: PropTypes.any
 };
 
 export default withRouter(Layout);

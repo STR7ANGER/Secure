@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import sidebarData from './SidebarData';
-import Footer from './Footer';
 //Simple bar
 import SimpleBar from 'simplebar-react';
 // MetisMenu
@@ -291,13 +290,8 @@ const Sidebar = (props) => {
               ))}
             </ul>
           </div>
-		  <hr/>
-		  <Footer/>
         </SimpleBar>
-		
       </div>
-	  
-
     </React.Fragment>
   );
 };
