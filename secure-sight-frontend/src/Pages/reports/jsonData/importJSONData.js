@@ -11,7 +11,6 @@ import {
 } from 'reactstrap';
 import Dropzone from 'react-dropzone';
 import Breadcrumbs from '../../../components/Common/Breadcrumb';
-import Papa from 'papaparse';
 import { Link, useNavigate } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast, ToastContainer } from 'react-toastify';
@@ -25,8 +24,8 @@ import {
 import ApiServices from '../../../Network_call/apiservices';
 import ApiEndPoints from '../../../Network_call/ApiEndPoints';
 
-const ImportCSVData = () => {
-  document.title = 'CSV Upload | Secure Sight';
+const ImportJSONData = () => {
+  document.title = 'JSON Upload | Secure Sight';
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
@@ -40,25 +39,24 @@ const ImportCSVData = () => {
     if (files && files.length > 0) {
       const file = files[0];
 
-      // Check if file is CSV
-      if (file.type !== 'text/csv' && !file.name.endsWith('.csv')) {
-        toast.error('Please upload only CSV files');
+      if (!file.name.endsWith('.json')) {
+        toast.error('Please upload only JSON files');
         return;
       }
 
       setFileName(files);
-      Papa.parse(file, {
-        header: true,
-        skipEmptyLines: true,
-        complete: (results) => {
-          setData(results.data);
-          toast.success('CSV file parsed successfully!');
-        },
-        error: (error) => {
-          console.error('Error parsing CSV:', error);
-          toast.error('Error parsing CSV file.');
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const jsonData = JSON.parse(e.target.result);
+          setData(Array.isArray(jsonData) ? jsonData : [jsonData]);
+          toast.success('JSON file parsed successfully!');
+        } catch (error) {
+          console.error('Error parsing JSON:', error);
+          toast.error('Error parsing JSON file.');
         }
-      });
+      };
+      reader.readAsText(file);
     }
   };
 
@@ -93,18 +91,18 @@ const ImportCSVData = () => {
       const response = await ApiServices(
         'post',
         payload,
-        ApiEndPoints.UploadFileData
+        ApiEndPoints.UploadJSONData
       );
 
       if (response.success) {
         setData([]);
-        navigate('/csv-list');
+        navigate('/json-list');
       }
 
       toast(response.msg);
     } catch (error) {
-      console.error('Error uploading CSV data:', error);
-      toast.error('Error uploading CSV data.');
+      console.error('Error uploading JSON data:', error);
+      toast.error('Error uploading JSON data.');
     } finally {
       setIsLoading(false);
     }
@@ -115,7 +113,7 @@ const ImportCSVData = () => {
       <ToastContainer />
       <div className="page-content">
         <Container fluid={true}>
-          <Breadcrumbs title="CSV" breadcrumbItem="CSV Upload" />
+          <Breadcrumbs title="JSON" breadcrumbItem="JSON Upload" />
           <Row>
             <Col className="col-12">
               <Card>
@@ -124,7 +122,7 @@ const ImportCSVData = () => {
                     <Dropzone
                       onDrop={handleAcceptedFiles}
                       accept={{
-                        'text/csv': ['.csv']
+                        'application/json': ['.json']
                       }}
                     >
                       {({ getRootProps, getInputProps }) => (
@@ -137,7 +135,7 @@ const ImportCSVData = () => {
                             <div className="mb-3">
                               <i className="display-4 text-muted mdi mdi-cloud-upload-outline"></i>
                             </div>
-                            <h4>Drop CSV files here to upload</h4>
+                            <h4>Drop JSON files here to upload</h4>
                           </div>
                         </div>
                       )}
@@ -199,7 +197,7 @@ const ImportCSVData = () => {
               <Col className="col-12">
                 <Card>
                   <CardBody>
-                    <CardTitle>CSV Data</CardTitle>
+                    <CardTitle>JSON Data Preview</CardTitle>
                     <MaterialTable
                       data={data}
                       columns={columns}
@@ -216,4 +214,4 @@ const ImportCSVData = () => {
   );
 };
 
-export default ImportCSVData;
+export default ImportJSONData;

@@ -24,45 +24,45 @@ import {
   allReplace
 } from '../../ulit/commonFunction';
 
-const CSVFileView = () => {
-  document.title = 'CSV View | Secure Sight';
+const JSONFileView = () => {
+  document.title = 'JSON View | Secure Sight';
   const { id } = useParams();
-  const [csvData, setCsvData] = useState(null);
+  const [jsonData, setJsonData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchCSVFile = async () => {
+    const fetchJSONFile = async () => {
       setLoading(true);
       try {
-        const apiUrl = `${ApiEndPoints.FileGet}${id}`;
+        const apiUrl = `${ApiEndPoints.JSONFileGet}${id}`;
         const response = await ApiServices('get', {}, apiUrl);
 
         if (response.success) {
-          setCsvData(response.data);
+          setJsonData(response.data);
         } else {
-          setError(response.msg || 'Failed to fetch CSV file');
-          toast.error(response.msg || 'Failed to fetch CSV file');
+          setError(response.msg || 'Failed to fetch JSON file');
+          toast.error(response.msg || 'Failed to fetch JSON file');
         }
       } catch (error) {
-        console.error('Error fetching CSV file:', error);
-        setError('Error fetching CSV file: ' + error.message);
-        toast.error('Error fetching CSV file: ' + error.message);
+        console.error('Error fetching JSON file:', error);
+        setError('Error fetching JSON file: ' + error.message);
+        toast.error('Error fetching JSON file: ' + error.message);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchCSVFile();
+    fetchJSONFile();
   }, [id]);
 
   const handleDelete = async (rowIndex) => {
     try {
-      const apiUrl = `${ApiEndPoints.FileDeleteRow}${id}/${rowIndex}`;
+      const apiUrl = `${ApiEndPoints.JSONFileDeleteRow}${id}/${rowIndex}`;
       const response = await ApiServices('delete', {}, apiUrl);
 
       if (response.success) {
-        setCsvData((prevData) => ({
+        setJsonData((prevData) => ({
           ...prevData,
           data: prevData.data.filter((_, index) => index !== rowIndex)
         }));
@@ -93,7 +93,6 @@ const CSVFileView = () => {
       )
     }));
 
-    // Add delete button column
     columns.push({
       accessorKey: 'actions',
       header: 'Actions',
@@ -122,14 +121,14 @@ const CSVFileView = () => {
       <ToastContainer />
       <div className="page-content">
         <Container fluid={true}>
-          <Breadcrumbs title="CSV" breadcrumbItem="CSV View" />
+          <Breadcrumbs title="JSON" breadcrumbItem="JSON View" />
 
           <Row>
             <Col className="col-12">
               <Card className="shadow-sm rounded-lg border-0">
                 <CardBody>
                   <CardTitle tag="h4" className="mb-3">
-                    CSV File Details
+                    JSON File Details
                   </CardTitle>
                   {loading ? (
                     <div className="d-flex justify-content-center my-5">
@@ -137,35 +136,35 @@ const CSVFileView = () => {
                     </div>
                   ) : error ? (
                     <div className="alert alert-danger">{error}</div>
-                  ) : csvData ? (
+                  ) : jsonData ? (
                     <div>
                       <p>
-                        <strong>File Name:</strong> {csvData.document_name}
+                        <strong>File Name:</strong> {jsonData.document_name}
                       </p>
                       <p>
                         <strong>Uploaded on:</strong>{' '}
-                        {new Date(csvData.upload_date).toLocaleString()}
+                        {new Date(jsonData.upload_date).toLocaleString()}
                       </p>
                     </div>
                   ) : (
-                    <div className="alert alert-info">No CSV data found</div>
+                    <div className="alert alert-info">No JSON data found</div>
                   )}
                 </CardBody>
               </Card>
             </Col>
           </Row>
 
-          {csvData && csvData.data && csvData.data.length > 0 && (
+          {jsonData && jsonData.data && jsonData.data.length > 0 && (
             <Row>
               <Col className="col-12">
                 <Card className="shadow-sm rounded-lg border-0 mt-4">
                   <CardBody>
                     <CardTitle tag="h4" className="mb-3">
-                      CSV Data
+                      JSON Data
                     </CardTitle>
                     <MaterialTable
-                      data={csvData.data}
-                      columns={getColumns(csvData.data)}
+                      data={jsonData.data}
+                      columns={getColumns(jsonData.data)}
                       hidecolumn={''}
                     />
                   </CardBody>
@@ -179,4 +178,4 @@ const CSVFileView = () => {
   );
 };
 
-export default CSVFileView;
+export default JSONFileView;

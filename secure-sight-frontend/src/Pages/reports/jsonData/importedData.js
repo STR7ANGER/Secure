@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Row, Col, Card, CardBody } from 'reactstrap';
 import { Link, useLocation } from 'react-router-dom';
 import { Backdrop, CircularProgress } from '@mui/material';
@@ -13,7 +13,6 @@ import MaterialTable from '../../Tables/Table';
 import { deepKeys, formatCapilize } from '../../ulit/commonFunction';
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 
-// Helper function to collect all keys from CSV data
 function getAllKeys(data) {
   const keys = [];
   function collectKeys(obj, prefix = '') {
@@ -34,16 +33,13 @@ function getAllKeys(data) {
   return keys;
 }
 
-const CSVData = () => {
+const ImportedData = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const document_name = searchParams.get('document_name');
   const id = searchParams.get('_id');
 
-  // Page title
-  document.title = 'CSV Data | Secure Sight';
-
-  // State variables
+  document.title = 'JSON Data | Secure Sight';
   const [data, setData] = useState([]);
   const [openLoader, setOpenLoader] = useState(false);
   const [userData, setUserData] = useState({
@@ -55,15 +51,15 @@ const CSVData = () => {
   useEffect(() => {
     let userObject = localStorage.getItem('authUser');
     var userInfo = userObject ? JSON.parse(userObject) : '';
-    setUserData(() => ({
+    setUserData({
       email: userInfo.email,
       dbName: userInfo.dbName,
       user_id: userInfo._id
-    }));
-    getCSVData({ user_id: userInfo._id, dbName: userInfo.dbName });
+    });
+    getJSONData({ user_id: userInfo._id, dbName: userInfo.dbName });
   }, []);
 
-  const getCSVData = async ({ dbName, user_id }) => {
+  const getJSONData = async ({ dbName, user_id }) => {
     setOpenLoader(true);
     let payload = {
       dbName: dbName,
@@ -77,32 +73,23 @@ const CSVData = () => {
     setOpenLoader(false);
   };
 
-  // Collect keys from CSV data
   const keys = Array.from(getAllKeys(data.length > 0 && data[0]));
-  const columns = useMemo(
-    () =>
-      keys &&
-      keys.map((name) => ({
-        accessorKey: name,
-        header: formatCapilize(name)
-      })),
-    [keys]
-  );
+  const columns = keys.map((name) => ({
+    accessorKey: name,
+    header: formatCapilize(name)
+  }));
 
   return (
     <React.Fragment>
       <ToastContainer />
       <div className="page-content">
         <div className="container-fluid">
-          <Breadcrumbs title="CSV" breadcrumbItem="Data" />
+          <Breadcrumbs title="JSON" breadcrumbItem="Data" />
           <Breadcrumbsub
             title={document_name}
             breadcrumbItem={
-              <Link to="/csv-list">
-                <button
-                  type="button"
-                  className="btn btn-primary waves-effect waves-light"
-                >
+              <Link to="/json-list">
+                <button className="btn btn-primary waves-effect waves-light">
                   <i className="ri-arrow-left-line align-middle ms-2"></i>
                   Back
                 </button>
@@ -119,7 +106,7 @@ const CSVData = () => {
                       <MaterialTable data={data} columns={columns} />
                     ) : (
                       <div className="alert alert-info">
-                        No CSV data available.
+                        No JSON data available.
                       </div>
                     )}
                   </div>
@@ -130,7 +117,6 @@ const CSVData = () => {
         </div>
       </div>
 
-      {/* Loader for background operations */}
       <Backdrop
         sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={openLoader}
@@ -142,4 +128,4 @@ const CSVData = () => {
   );
 };
 
-export default CSVData;
+export default ImportedData;

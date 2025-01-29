@@ -145,7 +145,7 @@ const SidebarData = [
       // { sublabel: "CSV Upload", link: "/csv-upload" },
       { sublabel: 'CSV List', link: '/csv-list' },
       // { sublabel: "Delete", link: "/csv-delete" },
-      { sublabel: 'Json', link: '' },
+      { sublabel: 'Json', link: '/json-list' },
       { sublabel: 'Excel', link: '' }
     ]
   }

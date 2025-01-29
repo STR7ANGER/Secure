@@ -22,81 +22,58 @@ import ApiServices from '../../../Network_call/apiservices';
 import ApiEndPoints from '../../../Network_call/ApiEndPoints';
 import DeleteModal from '../../../components/Common/DeleteModal';
 import Dropzone from 'react-dropzone';
-import Papa from 'papaparse';
 
-const CSVDataList = () => {
-  document.title = 'CSV Data | Secure Sight';
-  const [csvList, setCSVList] = useState([]);
-  const [openLoader, setOpenLoader] = React.useState(false);
+const JSONDataList = () => {
+  document.title = 'JSON Data | Secure Sight';
+  const [jsonList, setJSONList] = useState([]);
+  const [openLoader, setOpenLoader] = useState(false);
   const [deleteModal, setDeleteModal] = useState(false);
-  const [csvDataId, setCSVDataId] = useState('');
+  const [jsonDataId, setJSONDataId] = useState('');
   const [searchedVal, setSearchedVal] = useState('');
   const [importModal, setImportModal] = useState(false);
   const [uploadedFile, setUploadedFile] = useState(null);
   const [parsedData, setParsedData] = useState(null);
 
   useEffect(() => {
-    getCSVData();
+    getJSONData();
   }, []);
 
-  const getCSVData = async () => {
+  const getJSONData = async () => {
     setOpenLoader(true);
     try {
       const response = await ApiServices('get', {}, ApiEndPoints.FileList);
       if (response.success) {
-        // Filter files that have a .csv extension
-        const csvFiles = response.data.filter((file) =>
-          file.document_name.endsWith('.csv')
+        const jsonFiles = response.data.filter((file) =>
+          file.document_name.endsWith('.json')
         );
-        setCSVList(csvFiles);
+        setJSONList(jsonFiles);
       } else {
         toast(response.msg, { autoClose: 2000 });
       }
     } catch (error) {
-      console.error('Error fetching CSV data:', error);
-      toast('Error fetching CSV data', { autoClose: 2000 });
+      console.error('Error fetching JSON data:', error);
+      toast('Error fetching JSON data', { autoClose: 2000 });
     } finally {
       setOpenLoader(false);
     }
-  };
-
-  const DeleteAlert = (item) => {
-    setCSVDataId(item);
-    setDeleteModal(true);
-  };
-
-  const DeleteCSVData = async () => {
-    setOpenLoader(true);
-    let payload = {
-      _id: csvDataId
-    };
-    const response = await ApiServices(
-      'post',
-      payload,
-      ApiEndPoints.FileDelete
-    );
-    setDeleteModal(false);
-    toast(response.msg, { autoClose: 2000 });
-    getCSVData();
-    setOpenLoader(false);
   };
 
   const handleFileDrop = (acceptedFiles) => {
     const file = acceptedFiles[0];
     setUploadedFile(file);
 
-    Papa.parse(file, {
-      header: true,
-      skipEmptyLines: true,
-      complete: (results) => {
-        setParsedData(results.data);
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const jsonData = JSON.parse(e.target.result);
+        setParsedData(jsonData);
         toast.success('File parsed successfully!');
-      },
-      error: (error) => {
-        console.error('Error parsing CSV:', error);
-        toast.error('Error parsing CSV file');
+      } catch (error) {
+        console.error('Error parsing JSON:', error);
+        toast.error('Error parsing JSON file');
       }
-    });
+    };
+    reader.readAsText(file);
   };
 
   const handleUpload = async () => {
@@ -126,7 +103,7 @@ const CSVDataList = () => {
         setImportModal(false);
         setUploadedFile(null);
         setParsedData(null);
-        getCSVData(); // Refresh the list
+        getJSONData();
       } else {
         toast.error(response.msg);
       }
@@ -138,6 +115,27 @@ const CSVDataList = () => {
     }
   };
 
+  const DeleteAlert = (item) => {
+    setJSONDataId(item);
+    setDeleteModal(true);
+  };
+
+  const DeleteJSONData = async () => {
+    setOpenLoader(true);
+    const payload = {
+      _id: jsonDataId
+    };
+    const response = await ApiServices(
+      'post',
+      payload,
+      ApiEndPoints.FileDelete
+    );
+    setDeleteModal(false);
+    toast(response.msg, { autoClose: 2000 });
+    getJSONData();
+    setOpenLoader(false);
+  };
+
   return (
     <React.Fragment>
       <ToastContainer />
@@ -145,11 +143,11 @@ const CSVDataList = () => {
         <div className="container-fluid">
           <DeleteModal
             show={deleteModal}
-            onDeleteClick={DeleteCSVData}
+            onDeleteClick={DeleteJSONData}
             onCloseClick={() => setDeleteModal(false)}
           />
 
-          <Breadcrumbs title="Report" breadcrumbItem="List" />
+          <Breadcrumbs title="JSON Files" breadcrumbItem="List" />
 
           <Row>
             <Col lg={12}>
@@ -157,7 +155,7 @@ const CSVDataList = () => {
                 <CardBody>
                   <div className="d-flex justify-content-between align-items-center mb-4">
                     <Breadcrumbsub
-                      title="Report List"
+                      title="JSON File List"
                       breadcrumbItem={
                         <div className="input-group" style={{ width: '300px' }}>
                           <button
@@ -180,7 +178,7 @@ const CSVDataList = () => {
                       color="primary"
                       onClick={() => setImportModal(true)}
                     >
-                      Import CSV
+                      Import JSON
                     </Button>
                   </div>
 
@@ -191,34 +189,41 @@ const CSVDataList = () => {
                           <th>No.</th>
                           <th>File Name</th>
                           <th>Created Date</th>
+                          <th>Actions</th>
                         </tr>
                       </thead>
                       <tbody>
-                        {csvList &&
-                          csvList
-                            .filter(
-                              (x) =>
-                                !searchedVal.length ||
-                                x.document_name
-                                  .toString()
-                                  .toLowerCase()
-                                  .includes(searchedVal.toLowerCase())
-                            )
-                            .map((item, index) => (
-                              <tr key={item._id}>
-                                <th scope="row">{index + 1}</th>
-                                <td>
-                                  <Link to={`/csv-list/${item._id}`}>
-                                    {item.document_name}
-                                  </Link>
-                                </td>
-                                <td>
-                                  {new Date(
-                                    item.upload_date
-                                  ).toLocaleDateString()}
-                                </td>
-                              </tr>
-                            ))}
+                        {jsonList
+                          .filter(
+                            (x) =>
+                              !searchedVal.length ||
+                              x.document_name
+                                .toString()
+                                .toLowerCase()
+                                .includes(searchedVal.toLowerCase())
+                          )
+                          .map((item, index) => (
+                            <tr key={item._id}>
+                              <th scope="row">{index + 1}</th>
+                              <td>
+                                <Link to={`/json-view/${item._id}`}>
+                                  {item.document_name}
+                                </Link>
+                              </td>
+                              <td>
+                                {new Date(item.upload_date).toLocaleDateString()}
+                              </td>
+                              <td>
+                                <Button
+                                  color="danger"
+                                  size="sm"
+                                  onClick={() => DeleteAlert(item._id)}
+                                >
+                                  Delete
+                                </Button>
+                              </td>
+                            </tr>
+                          ))}
                       </tbody>
                     </table>
                   </div>
@@ -234,11 +239,11 @@ const CSVDataList = () => {
             size="lg"
           >
             <ModalHeader toggle={() => setImportModal(false)}>
-              Import CSV File
+              Import JSON File
             </ModalHeader>
             <ModalBody>
               <div className="mb-4">
-                <Dropzone onDrop={handleFileDrop}>
+                <Dropzone onDrop={handleFileDrop} accept=".json">
                   {({ getRootProps, getInputProps }) => (
                     <div
                       {...getRootProps()}
@@ -251,7 +256,7 @@ const CSVDataList = () => {
                     >
                       <input {...getInputProps()} />
                       <i className="display-4 text-muted mdi mdi-upload mb-2" />
-                      <p>Drag & drop a CSV file here, or click to select one</p>
+                      <p>Drag & drop a JSON file here, or click to select one</p>
                       {uploadedFile && (
                         <div className="mt-3">
                           <strong>Selected file:</strong> {uploadedFile.name}
@@ -292,4 +297,4 @@ const CSVDataList = () => {
   );
 };
 
-export default CSVDataList;
+export default JSONDataList;
